@@ -29,8 +29,9 @@ function Payment() {
   };
   return (
     <Fragment>
-            {JSON.stringify(data) }
-            {JSON.stringify(user) }
+            {/* {JSON.stringify(data) }
+            {JSON.stringify(user) } */}
+            <div>Pay Fees:</div>
             <form onSubmit={handleForm}>
               <label htmlFor="exampleEmail">Amount</label>
               <input type="text" id="amount" name="amount" 
