@@ -7,13 +7,13 @@ export const doLogin=(data,next)=>{
 export const isLoggedIn=()=>{
     let data=localStorage.getItem("data")
     // let data=decryptData(data1)
-    console.log(data)
     // console.log(data1)
     if(data!=null) return true;
     else return false;
 }
 export const doLogout=(next)=>{
-    localStorage.removeItem("data")
+    // localStorage.removeItem("data")
+    localStorage.clear()
     next()
 }
 

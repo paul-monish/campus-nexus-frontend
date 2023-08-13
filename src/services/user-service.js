@@ -1,8 +1,8 @@
 
-import { myAxios } from "./helper"
-import { encryptPayload } from "../security/JWTSecurity"
-const secretKey = 'MySecretKey12345';
-const initVector = 'MyInitVector123';
+import { myAxios, privateAxios } from "./helper"
+// import { encryptPayload } from "../security/JWTSecurity"
+// const secretKey = 'MySecretKey12345';
+// const initVector = 'MyInitVector123';
 
 // 
 
@@ -18,7 +18,7 @@ export const login=(user)=>{
     // const encryptedPayload = encryptPayload(JSON.stringify(user), secretKey, initVector);
     // console.log(encryptedPayload)
     return myAxios
-    .post('/auth/authenticate',user
+    .post('/auth/authenticate/login',user
     // ,{
     //     headers: {
     //       'Content-Type': 'application/json'
@@ -38,4 +38,17 @@ export const changePassword=(user)=>{
     return myAxios
     .put('/user/update-password',user)
     .then((response)=>response.data);
+}
+
+export const logout=(user)=>{
+  return privateAxios
+  .post('/auth/logout',user)
+  .then((response)=>response.data);
+}
+
+export const getStudentPaymentRecord=(userId)=>{
+  console.log(userId)
+  return myAxios
+  .get(`/permanent/student-payment-record/${userId}`)
+  .then((response)=>response.data);
 }

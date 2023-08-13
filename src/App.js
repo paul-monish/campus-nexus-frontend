@@ -11,7 +11,7 @@ import Reset from './pages/Reset'
 import Loading from './components/Loading';
 import { useEffect, useState } from 'react';
 import { myAxios, privateAxios } from './services/helper';
-
+import MakePayment from '../src/pages/MakePayment';
 function App() {
   const [loading,setLoading]=useState(false);
   useEffect(()=>{
@@ -33,38 +33,35 @@ function App() {
       setLoading(false);
       return config;
     },(error)=>{
+      setLoading(false);
       return Promise.reject(error);
     });
     privateAxios.interceptors.response.use((config)=>{
       setLoading(false);
       return config;
     },(error)=>{
+      setLoading(false);
       return Promise.reject(error);
     });
-
   },[])
-  return (
-   
+  return (  
     <BrowserRouter>
      <ToastContainer/>
      <Loading show={loading}/>
-    <Routes>
-        <Route path="/" element={<Login/>}/>
-        <Route path="/login" element={<Login/>}/>
-       
-        {/* <Route path="*" element={<NoPage />} /> */}
-        <Route path="/home" element={<Home/>}/>
-        <Route path="/forgot" element={<Forget/>}/>
-        <Route path="/reset" element={<Reset/>}/>
-        <Route path="/verification" element={<Verification/>}/>
-     
+    <Routes>   
+      <Route path="/" element={<Login/>}/>
+      <Route path="/login" element={<Login/>}/>
+      {/* <Route path="*" element={<NoPage />} /> */}
+      <Route path="/home" element={<Home/>}/>
+      <Route path="/forgot" element={<Forget/>}/>
+      <Route path="/reset" element={<Reset/>}/>
+      <Route path="/verification" element={<Verification/>}/>
       <Route path="/user" element={<Privateroute/>}>
         <Route path="payment" element={<Payment/>}/>
+        <Route path="fees-payment" element={<MakePayment/>}/>
       </Route>
-     
     </Routes>
   </BrowserRouter>
   );
 }
-
 export default App;

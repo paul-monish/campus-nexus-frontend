@@ -5,3 +5,4 @@ import { isLoggedIn } from '../auth/authenticate';
 export const Privateroute = () => {
     return isLoggedIn() ? <Outlet/>:<Navigate to={"/login"}/>
 }
+

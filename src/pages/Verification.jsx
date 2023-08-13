@@ -35,7 +35,7 @@ const Verification = () => {
   return (
     <Grid >
 
-      <Paper elevation={10} style={paperStyle} boxShadow={"5px 5px 10px #ccc"} sx={{
+      <Paper elevation={10} style={paperStyle} boxshadow={"5px 5px 10px #ccc"} sx={{
         ":hover": {
           boxShadow: '10px 10px 20px #ccc'
         }

@@ -24,7 +24,7 @@ export const Login = () => {
   //   isError:false
   // });
 
-   //handle change 
+  //handle change 
    const handleChnage=(e)=>{
     // console.log(e.target.name);
     setUser({...user,[e.target.name]:e.target.value})
@@ -49,11 +49,12 @@ export const Login = () => {
       //save
       doLogin(data,()=>{
         //redirect
-        navigate("/user/payment")
+        navigate("/user/fees-payment")
       })
     }).catch((error)=>{
-      console.log(error)
-      if(error.response.status === 400 || error.response.status === 404)
+      // console.log(error)
+      console.log(error);
+      if(error.response.status === 400 || error.response.status === 404 || error.response.data.status === "false" || error.response.status === 401)
         alert(error.response.data.message)
         resetUser()
     })
@@ -61,7 +62,7 @@ export const Login = () => {
    }
   return (
     <Grid align="left">
-      <Paper elevation={10} style={paperStyle} boxShadow={"5px 5px 10px #ccc"} sx={{
+      <Paper elevation={10} style={paperStyle} boxshadow={"5px 5px 10px #ccc"} sx={{
         ":hover": {
           boxShadow: '10px 10px 20px #ccc'
         }

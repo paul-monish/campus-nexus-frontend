@@ -24,13 +24,22 @@ export default async function displayRazorpay(data){
   }
  
   // const result = await privateAxios.post(`/payment/create-order`,data);
-  const result = await createOrder(data);
-   
-  if (!result) {
-      alert("Server error. Are you online?");
-      return;
-  }
-  const  { amount, orderId, currency } = result;
+  let result="";
+   try{
+    result= await createOrder(data);
+    console.log(result);
+    if (!result) {
+        alert("Server error. Are you online?");
+        return;
+    }
+    }catch(error){ 
+        alert(error.response.data.message);
+        return;
+      
+    }
+
+ 
+  const  { id,universityRollNumber,amount, orderId, currency,semId } = result;
   const options = {
       key: "rzp_test_J8r4aTJYjRo9AF", // Enter the Key ID generated from the Dashboard
       amount: amount.toString(),
@@ -45,6 +54,10 @@ export default async function displayRazorpay(data){
               razorpayPaymentId: response.razorpay_payment_id,
               razorpayOrderId: response.razorpay_order_id,
               razorpaySignature: response.razorpay_signature,
+              semId:semId,
+              amount:amount,
+              payment_id:id,
+              universityRollNumber:universityRollNumber,
               status: "paid"
           };
           console.log(data);
