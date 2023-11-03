@@ -4,7 +4,7 @@ import { Fragment, useEffect, useState } from "react";
 import displayRazorpay from "../handelers/PaymentHandler";
 import { getCurrentUserDetails } from "../auth/authenticate";
 import { getSemesters } from "../services/semester-service";
-import { Logout } from "./Logout";
+
 function Payment() {
 
   const[data,setData]=useState({
@@ -85,7 +85,7 @@ function Payment() {
 
   return (
     <Fragment>
-            <Logout/>
+           
             {/* {JSON.stringify(data) }
             {JSON.stringify(user) } */}
             {JSON.stringify(sem) }

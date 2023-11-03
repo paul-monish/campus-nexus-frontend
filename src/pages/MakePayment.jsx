@@ -8,7 +8,7 @@ import TableCell from '@mui/material/TableCell';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import TableContainer from '@mui/material/TableContainer';
-import { Form, Link, useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 import Stack from '@mui/joy/Stack';
 import logo2 from '../images/cnlogo.png';
 import logo1 from '../images/mckvlogo2.png'
@@ -21,9 +21,10 @@ import Select from '@mui/material/Select';
 import displayRazorpay from "../handelers/PaymentHandler";
 import { getCurrentUserDetails } from "../auth/authenticate";
 import { getSemesters } from "../services/semester-service";
-import { Logout } from "../components/Logout";
+
 import { getStudentPaymentRecord } from "../services/user-service"
-import { getRoles } from "@testing-library/react";
+import Logout from "../components/Logout";
+// import Redis from "redis";
 const appBarTheme = createTheme({
   palette: {
     appbarColor: {
@@ -59,18 +60,11 @@ function ratesFor(rates, fees) {
   return { rates, fees };
 }
 
-
-
-
-
 const MakePayment = () => {
-
- 
-
-  const navigate = useNavigate();
-  const navigateToPayment = () => {
-    navigate("/MakePayment");
-  };
+  // const navigate = useNavigate();
+  // const navigateToPayment = () => {
+  //   navigate("/MakePayment");
+  // };
 // added
 
   const [rows,setRows]=useState([
@@ -142,15 +136,19 @@ const MakePayment = () => {
     data['universityRollNumber']=user.universityRollNumber;
     data['semId']=selectedValue.id;
     displayRazorpay(data);
-    e.preventDefault();;
+    e.preventDefault();
   }
  
+
+
+
   useEffect(()=>{
     setUser(getCurrentUserDetails());
-    getAllSemesters();
-    // if(user.universityRollNumber!=undefined){
+    console.log(user);
+    if(user.universityRollNumber!=undefined){
         getPaymentDetails(user.universityRollNumber);
-    // }
+        getAllSemesters();
+     }
   },[user.universityRollNumber]);
 
   //global to local 
@@ -174,6 +172,7 @@ const MakePayment = () => {
         <AppBar position='absolute' color="appbarColor">
           <Toolbar>
             <img src={logo2} alt="logo" className='nav-logo' />
+            <Logout/>
             <Typography varient="h1" component='div' fontWeight={800} sx={{ flexGrow: 2, fontSize: 20, fontFamily: 'Montserrat' }} > </Typography>
             <Stack direction='row' spacing={1}>
             <img src={logo1} alt="mckvlogo2" height={50} width={300}/>

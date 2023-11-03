@@ -45,11 +45,12 @@ export const Login = () => {
       return;
     }
     //call api
+    
     login(user).then((data)=>{
       //save
       doLogin(data,()=>{
         //redirect
-        navigate("/user/fees-payment")
+        navigate("/user/dashboard")
       })
     }).catch((error)=>{
       // console.log(error)

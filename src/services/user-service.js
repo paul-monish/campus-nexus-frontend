@@ -27,6 +27,38 @@ export const login=(user)=>{
       )
     .then((response)=>response.data);
 }
+export const setEnroll=(user)=>{
+  return myAxios
+  .put('/user/setEnroll',user)
+  .then((response)=>response.data);
+}
+export const getEnrolledInfo=(uRoll)=>{
+  return myAxios
+  .get(`/user/${uRoll}`)
+  .then((response)=>response.data);
+}
+//
+export const getSubject=(semId,deptId)=>{
+  return myAxios
+  .get(`subject/getSubject/${semId}/${deptId}`)
+  .then((response)=>response.data);
+}
+export const elective=(semId,deptId)=>{
+  return myAxios
+  .get(`subject/elective/${semId}/${deptId}`)
+  .then((response)=>response.data);
+}
+export const addEnroll=(user)=>{
+  return myAxios
+  .put('user/setEnroll',user)
+  .then((response)=>response.data);
+}
+//
+export const isRedisCacheActive=(user)=>{
+  return myAxios
+  .post('/auth/authenticate/isActive',user)
+  .then((response)=>response.data);
+}
 export const sendOtpEmail=(user)=>{
   // console.log(process.env.REACT_APP_BASE_URL+"ss");
     return myAxios
