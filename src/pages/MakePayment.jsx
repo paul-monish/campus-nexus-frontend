@@ -47,7 +47,7 @@ const ColoredLine = () => (
   </div>
 )
 
-const paperStyle = { padding: 20, height: '890px', width: "750px", margin: "120px auto", borderRadius: 10 }
+const paperStyle = { padding: 20, height: '950px', width: "750px", margin: "120px auto", borderRadius: 10 }
 // const avatarStyle = { backgroundColor: '#20bce4', height: "60px", width: "60px", borderRadius: 1 }
 const btnstyle = { margin: '8px 0', backgroundColor: "#ffa500" }
 
@@ -145,7 +145,7 @@ const MakePayment = () => {
   useEffect(()=>{
     setUser(getCurrentUserDetails());
     console.log(user);
-    if(user.universityRollNumber!=undefined){
+    if(user.universityRollNumber!==undefined){
         getPaymentDetails(user.universityRollNumber);
         getAllSemesters();
      }
@@ -212,21 +212,26 @@ const MakePayment = () => {
 
 
               <TableBody>
-                {rows.map((row) => (
+                {rows.length>0? rows.map((row) => (
                   <TableRow
-                    key={row.id}
-                    sx={{ '&:last-child td, &:last-child th': { border: 'px solid #ccc' } }}
+                    key={row?.id}
+                    sx={{ '&:last-child td, &:last-child th': { border: '1px solid #ccc' } }}
 
                   >
                     <TableCell sx={{ borderRight: '1px solid #ccc' }}
                       align="center" component="th" scope="row">
-                      {row.course}
+                      {row?.course}
                     </TableCell>
-                    <TableCell sx={{ borderRight: '1px solid #ccc' }} align="center">{row.semester}</TableCell>
-                    <TableCell sx={{ borderRight: '1px solid #ccc' }} align="center">{row.amount/100}</TableCell>
-                    <TableCell sx={{ borderRight: '1px solid #ccc' }} align="center">{row.payment_type}</TableCell>
+                    <TableCell sx={{ borderRight: '1px solid #ccc' }} align="center">{row?.semester}</TableCell>
+                    <TableCell sx={{ borderRight: '1px solid #ccc' }} align="center">{row?.amount/100}</TableCell>
+                    <TableCell sx={{ borderRight: '1px solid #ccc' }} align="center">{row?.payment_type}</TableCell>
                   </TableRow>
-                ))}
+                )):<TableRow
+                sx={{ '&:last-child td, &:last-child th': { border: '1px solid #ccc' } }}>
+                  No data Found
+                  </TableRow>
+                }
+              
               </TableBody>
 
             </Table>

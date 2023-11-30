@@ -1,6 +1,5 @@
 import {createOrder, updateOrder} from "../services/payment-service";
-import { toast } from "react-toastify";
-
+import Swal from 'sweetalert2'
 function loadScript(src){
   return new Promise((resolve) => {
       const script = document.createElement("script");
@@ -69,17 +68,30 @@ export default async function displayRazorpay(data){
           // })
           //console.log(update_data);
           // const result = await privateAxios.put(`/payment/update-order`,data);
-          const result = await updateOrder(data);
-          if(result){
-             alert("successfully payment!!");
-             toast.success('Successfully Payment !', {
-              position: toast.POSITION.TOP_RIGHT
-              });
+          try{
+            const result = await updateOrder(data);
+            if(result){
+                Swal.fire({
+                    // position: "top-end",
+                    icon: "success",
+                    title: "Successfully Payment!",
+                    showConfirmButton: false,
+                    timer: 1500
+                  });
+            
+            }
+            else{
+                Swal.fire({
+                    icon: "error",
+                    title: "Oops...",
+                    text: "Something went wrong!",
+                    // footer: '<a href="#">Why do I have this issue?</a>'
+                  });
+            }
+          }catch(error){
+            alert(error)
+          }
           
-          }
-          else{
-              toast.error("payment is faild!!");
-          }
        
       },
       prefill: {

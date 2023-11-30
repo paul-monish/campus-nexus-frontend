@@ -19,6 +19,12 @@ import { isLoggedIn } from './auth/authenticate';
 
 import Enrollment from './pages/Enrollment';
 import Dashboard from './pages/Dashboard';
+
+// admin import
+import Student from './admin/Student'
+import AdminDashboard from './admin/AdminDashboard';
+import DefaulterList from './admin/DefaulterList';
+import AdminLogin from './admin/AdminLogin';
 function App() {
   const [loading,setLoading]=useState(false);
   const[user,setUser]=useState({});    
@@ -86,7 +92,16 @@ function App() {
       <Route path="/reset" element={<Reset/>}/>
       <Route path="/verification" element={<Verification/>}/>
       <Route path="/logout" element={<Logout/>}/>
-      
+
+      {/* Admin Route */}
+      <Route path="/admin-login" element={<AdminLogin/>}/>
+      <Route path="/admin" element={<Privateroute/>}>
+        <Route path="student-list" element={<Student/>}/>
+        <Route path="admin-dashboard" element={<AdminDashboard/>}/>
+        <Route path="defaulter-list" element={<DefaulterList/>}/>
+      </Route>
+
+      {/* Student route */}
       <Route path="/user" element={<Privateroute/>}>
         <Route path="dashboard" element={<Dashboard/>}/>
         <Route path="payment" element={<Payment/>}/>

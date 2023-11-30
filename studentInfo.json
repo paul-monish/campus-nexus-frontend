@@ -1,0 +1,1296 @@
+﻿    {
+        "name": "ABHISHEK MISHRA",
+        "email": "monish.paul2000@gmail.com",
+        "universityRollNumber": "201160100110060",
+        "contactNumber": "6290442416",
+        "collageRollNumber": "CSE/2020/052",
+        "examRollNumber": "11600220001",
+        "department": 
+            {
+                "id": 1
+            },
+        "semester": 
+            {
+                "id": 7
+            },
+        "batch": "2020-21",
+        "dob": "2000-08-11"
+    },
+    {
+        "name": "AHANA DAS",
+        "email": "monish.paul2000@gmail.com",
+        "universityRollNumber": "201160100110016",
+        "contactNumber": "6290442416",
+        "collageRollNumber": "CSE/2020/043",
+        "examRollNumber": "11600220002",
+        "department": 
+            {
+                "id": 1
+            },
+        "semester": 
+            {
+                "id": 1
+            },
+        "batch": "2020-21",
+        "dob": "2000-08-12"
+    },
+    {
+        "name": "AINDRILA RAY",
+        "email": "monish.paul2000@gmail.com",
+        "universityRollNumber": "201160100110021",
+        "contactNumber": "6290442416",
+        "collageRollNumber": "CSE/2020/003",
+        "examRollNumber": "11600220003",
+        "department": 
+            {
+                "id": 1
+            },
+        "semester": 
+            {
+                "id": 1
+            },
+        "batch": "2020-21",
+        "dob": "2000-08-13"
+    },
+    {
+        "name": "ANINDITA KUNDU",
+        "email": "monish.paul2000@gmail.com",
+        "universityRollNumber": "201160100110002",
+        "contactNumber": "6290442416",
+        "collageRollNumber": "CSE/2020/017",
+        "examRollNumber": "11600220004",
+        "department": 
+            {
+                "id": 1
+            },
+        "semester": 
+            {
+                "id": 1
+            },
+        "batch": "2020-21",
+        "dob": "2000-08-14"
+    },
+    {
+        "name": "ANIRBAN GHOSH",
+        "email": "monish.paul2000@gmail.com",
+        "universityRollNumber": "201160100110017",
+        "contactNumber": "6290442416",
+        "collageRollNumber": "CSE/2020/038",
+        "examRollNumber": "11600220005",
+        "department": 
+            {
+                "id": 1
+            },
+        "semester": 
+            {
+                "id": 1
+            },
+        "batch": "2020-21",
+        "dob": "2000-08-15"
+    },
+    {
+        "name": "ANUBHAB MUKHERJEE",
+        "email": "monish.paul2000@gmail.com",
+        "universityRollNumber": "201160100110037",
+        "contactNumber": "6290442416",
+        "collageRollNumber": "CSE/2020/040",
+        "examRollNumber": "11600220006",
+        "department": 
+            {
+                "id": 1
+            },
+        "semester": 
+            {
+                "id": 1
+            },
+        "batch": "2020-21",
+        "dob": "2000-08-16"
+    },
+    {
+        "name": "ARCHISMAN DAS",
+        "email": "monish.paul2000@gmail.com",
+        "universityRollNumber": "201160100110049",
+        "contactNumber": "6290442416",
+        "collageRollNumber": "CSE/2020/047",
+        "examRollNumber": "11600220007",
+        "department": 
+            {
+                "id": 1
+            },
+        "semester": 
+            {
+                "id": 1
+            },
+        "batch": "2020-21",
+        "dob": "2000-08-17"
+    },
+    {
+        "name": "ARINDAM SAL",
+        "email": "monish.paul2000@gmail.com",
+        "universityRollNumber": "201160100110011",
+        "contactNumber": "6290442416",
+        "collageRollNumber": "CSE/2020/011",
+        "examRollNumber": "11600220008",
+        "department": 
+            {
+                "id": 1
+            },
+        "semester": 
+            {
+                "id": 1
+            },
+        "batch": "2020-21",
+        "dob": "2000-08-18"
+    },
+    {
+        "name": "ARPANDEV BHATTACHARYA",
+        "email": "monish.paul2000@gmail.com",
+        "universityRollNumber": "201160100110001",
+        "contactNumber": "6290442416",
+        "collageRollNumber": "CSE/2020/018",
+        "examRollNumber": "11600220009",
+        "department": 
+            {
+                "id": 1
+            },
+        "semester": 
+            {
+                "id": 1
+            },
+        "batch": "2020-21",
+        "dob": "2000-08-19"
+    },
+    {
+        "name": "ATANU PANJA",
+        "email": "monish.paul2000@gmail.com",
+        "universityRollNumber": "201160100110059",
+        "contactNumber": "6290442416",
+        "collageRollNumber": "CSE/2020/008",
+        "examRollNumber": "11600220010",
+        "department": 
+            {
+                "id": 1
+            },
+        "semester": 
+            {
+                "id": 1
+            },
+        "batch": "2020-21",
+        "dob": "2000-08-20"
+    },
+    {
+        "name": "ATREYEE KAR",
+        "email": "monish.paul2000@gmail.com",
+        "universityRollNumber": "201160100110003",
+        "contactNumber": "6290442416",
+        "collageRollNumber": "CSE/2020/010",
+        "examRollNumber": "11600220011",
+        "department": 
+            {
+                "id": 1
+            },
+        "semester": 
+            {
+                "id": 1
+            },
+        "batch": "2020-21",
+        "dob": "2000-08-21"
+    },
+    {
+        "name": "AVIJEET SHARMA",
+        "email": "monish.paul2000@gmail.com",
+        "universityRollNumber": "201160100110043",
+        "contactNumber": "6290442416",
+        "collageRollNumber": "CSE/2020/061",
+        "examRollNumber": "11600220012",
+        "department": 
+            {
+                "id": 1
+            },
+        "semester": 
+            {
+                "id": 1
+            },
+        "batch": "2020-21",
+        "dob": "2000-08-22"
+    },
+    {
+        "name": "AVIRUP MAZUMDER",
+        "email": "monish.paul2000@gmail.com",
+        "universityRollNumber": "201160100110005",
+        "contactNumber": "6290442416",
+        "collageRollNumber": "CSE/2020/019",
+        "examRollNumber": "11600220013",
+        "department": 
+            {
+                "id": 1
+            },
+        "semester": 
+            {
+                "id": 1
+            },
+        "batch": "2020-21",
+        "dob": "2000-08-23"
+    },
+    {
+        "name": "AYUSH KUMAR JHA",
+        "email": "monish.paul2000@gmail.com",
+        "universityRollNumber": "201160100110044",
+        "contactNumber": "6290442416",
+        "collageRollNumber": "CSE/2020/058",
+        "examRollNumber": "11600220014",
+        "department": 
+            {
+                "id": 1
+            },
+        "semester": 
+            {
+                "id": 1
+            },
+        "batch": "2020-21",
+        "dob": "2000-08-23"
+    },
+    {
+        "name": "BADAL KUMAR",
+        "email": "monish.paul2000@gmail.com",
+        "universityRollNumber": "201160100110050",
+        "contactNumber": "6290442416",
+        "collageRollNumber": "CSE/2020/046",
+        "examRollNumber": "11600220015",
+        "department": 
+            {
+                "id": 1
+            },
+        "semester": 
+            {
+                "id": 1
+            },
+        "batch": "2020-21",
+        "dob": "2000-08-23"
+    },
+    {
+        "name": "BIDISHA CHATTERJEE",
+        "email": "monish.paul2000@gmail.com",
+        "universityRollNumber": "201160100110019",
+        "contactNumber": "6290442416",
+        "collageRollNumber": "CSE/2020/060",
+        "examRollNumber": "11600220016",
+        "department": 
+            {
+                "id": 1
+            },
+        "semester": 
+            {
+                "id": 1
+            },
+        "batch": "2020-21",
+        "dob": "2000-08-23"
+    },
+    {
+        "name": "BIPASHNA SADHUKHAN",
+        "email": "monish.paul2000@gmail.com",
+        "universityRollNumber": "201160100110054",
+        "contactNumber": "6290442416",
+        "collageRollNumber": "CSE/2020/035",
+        "examRollNumber": "11600220017",
+        "department": 
+            {
+                "id": 1
+            },
+        "semester": 
+            {
+                "id": 1
+            },
+        "batch": "2020-21",
+        "dob": "2000-08-23"
+    },
+    {
+        "name": "DEBRUP PRAMANIK",
+        "email": "monish.paul2000@gmail.com",
+        "universityRollNumber": "201160100110038",
+        "contactNumber": "6290442416",
+        "collageRollNumber": "CSE/2020/030",
+        "examRollNumber": "11600220018",
+        "department": 
+            {
+                "id": 1
+            },
+        "semester": 
+            {
+                "id": 1
+            },
+        "batch": "2020-21",
+        "dob": "2000-08-23"
+    },
+    {
+        "name": "DIPAK MOURYA",
+        "email": "monish.paul2000@gmail.com",
+        "universityRollNumber": "201160100110022",
+        "contactNumber": "6290442416",
+        "collageRollNumber": "CSE/2020/009",
+        "examRollNumber": "11600220019",
+        "department": 
+            {
+                "id": 1
+            },
+        "semester": 
+            {
+                "id": 1
+            },
+        "batch": "2020-21",
+        "dob": "2000-08-23"
+    },
+    {
+        "name": "DIPANJAN NATH",
+        "email": "monish.paul2000@gmail.com",
+        "universityRollNumber": "201160100110025",
+        "contactNumber": "6290442416",
+        "collageRollNumber": "CSE/2020/002",
+        "examRollNumber": "11600220020",
+        "department": 
+            {
+                "id": 1
+            },
+        "semester": 
+            {
+                "id": 1
+            },
+        "batch": "2020-21",
+        "dob": "2000-08-23"
+    },
+    {
+        "name": "DIVYANSHU SHEKHAR",
+        "email": "monish.paul2000@gmail.com",
+        "universityRollNumber": "201160100110055",
+        "contactNumber": "6290442416",
+        "collageRollNumber": "CSE/2020/059",
+        "examRollNumber": "11600220021",
+        "department": 
+            {
+                "id": 1
+            },
+        "semester": 
+            {
+                "id": 1
+            },
+        "batch": "2020-21",
+        "dob": "2000-08-23"
+    },
+    {
+        "name": "DWIJENDRA PATI TRIPATHI",
+        "email": "monish.paul2000@gmail.com",
+        "universityRollNumber": "201160100110056",
+        "contactNumber": "6290442416",
+        "collageRollNumber": "CSE/2020/063",
+        "examRollNumber": "11600220022",
+        "department": 
+            {
+                "id": 1
+            },
+        "semester": 
+            {
+                "id": 1
+            },
+        "batch": "2020-21",
+        "dob": "2000-08-23"
+    },
+    {
+        "name": "ERA VERMA",
+        "email": "monish.paul2000@gmail.com",
+        "universityRollNumber": "201160100110027",
+        "contactNumber": "6290442416",
+        "collageRollNumber": "CSE/2020/006",
+        "examRollNumber": "11600220023",
+        "department": 
+            {
+                "id": 1
+            },
+        "semester": 
+            {
+                "id": 1
+            },
+        "batch": "2020-21",
+        "dob": "2000-08-23"
+    },
+    {
+        "name": "HARSH BAID",
+        "email": "monish.paul2000@gmail.com",
+        "universityRollNumber": "201160100110010",
+        "contactNumber": "6290442416",
+        "collageRollNumber": "CSE/2020/024",
+        "examRollNumber": "11600220024",
+        "department": 
+            {
+                "id": 1
+            },
+        "semester": 
+            {
+                "id": 1
+            },
+        "batch": "2020-21",
+        "dob": "2000-08-23"
+    },
+    {
+        "name": "HITESH PERIWAL",
+        "email": "monish.paul2000@gmail.com",
+        "universityRollNumber": "201160100110026",
+        "contactNumber": "6290442416",
+        "collageRollNumber": "CSE/2020/055",
+        "examRollNumber": "11600220025",
+        "department": 
+            {
+                "id": 1
+            },
+        "semester": 
+            {
+                "id": 1
+            },
+        "batch": "2020-21",
+        "dob": "2000-08-23"
+    },
+    {
+        "name": "HRITIK AGARWAL",
+        "email": "monish.paul2000@gmail.com",
+        "universityRollNumber": "201160100110004",
+        "contactNumber": "6290442416",
+        "collageRollNumber": "CSE/2020/020",
+        "examRollNumber": "11600220026",
+        "department": 
+            {
+                "id": 1
+            },
+        "semester": 
+            {
+                "id": 1
+            },
+        "batch": "2020-21",
+        "dob": "2000-08-23"
+    },
+    {
+        "name": "ISHIKA GHOSH",
+        "email": "monish.paul2000@gmail.com",
+        "universityRollNumber": "201160100110063",
+        "contactNumber": "6290442416",
+        "collageRollNumber": "CSE/2020/044",
+        "examRollNumber": "11600220027",
+        "department": 
+            {
+                "id": 1
+            },
+        "semester": 
+            {
+                "id": 1
+            },
+        "batch": "2020-21",
+        "dob": "2000-08-23"
+    },
+    {
+        "name": "KESHAV KUMAR",
+        "email": "monish.paul2000@gmail.com",
+        "universityRollNumber": "201160100110042",
+        "contactNumber": "6290442416",
+        "collageRollNumber": "CSE/2020/014",
+        "examRollNumber": "11600220028",
+        "department": 
+            {
+                "id": 1
+            },
+        "semester": 
+            {
+                "id": 1
+            },
+        "batch": "2020-21",
+        "dob": "2000-08-23"
+    },
+    {
+        "name": "LOKESH NAHAR",
+        "email": "monish.paul2000@gmail.com",
+        "universityRollNumber": "201160100110053",
+        "contactNumber": "6290442416",
+        "collageRollNumber": "CSE/2020/033",
+        "examRollNumber": "11600220029",
+        "department": 
+            {
+                "id": 1
+            },
+        "semester": 
+            {
+                "id": 1
+            },
+        "batch": "2020-21",
+        "dob": "2000-08-23"
+    },
+    {
+        "name": "MAINAK MAITY",
+        "email": "monish.paul2000@gmail.com",
+        "universityRollNumber": "201160100110012",
+        "contactNumber": "6290442416",
+        "collageRollNumber": "CSE/2020/022",
+        "examRollNumber": "11600220030",
+        "department": 
+            {
+                "id": 1
+            },
+        "semester": 
+            {
+                "id": 1
+            },
+        "batch": "2020-21",
+        "dob": "2000-08-23"
+    },
+    {
+        "name": "MAINAK MANDAL",
+        "email": "monish.paul2000@gmail.com",
+        "universityRollNumber": "201160100110013",
+        "contactNumber": "6290442416",
+        "collageRollNumber": "CSE/2020/023",
+        "examRollNumber": "11600220031",
+        "department": 
+            {
+                "id": 1
+            },
+        "semester": 
+            {
+                "id": 1
+            },
+        "batch": "2020-21",
+        "dob": "2000-08-23"
+    },
+    {
+        "name": "MAYANK MANAS",
+        "email": "monish.paul2000@gmail.com",
+        "universityRollNumber": "201160100110062",
+        "contactNumber": "6290442416",
+        "collageRollNumber": "CSE/2020/062",
+        "examRollNumber": "11600220032",
+        "department": 
+            {
+                "id": 1
+            },
+        "semester": 
+            {
+                "id": 1
+            },
+        "batch": "2020-21",
+        "dob": "2000-08-23"
+    },
+    {
+        "name": "MD SOHAIL",
+        "email": "monish.paul2000@gmail.com",
+        "universityRollNumber": "201160100110030",
+        "contactNumber": "6290442416",
+        "collageRollNumber": "CSE/2020/050",
+        "examRollNumber": "11600220033",
+        "department": 
+            {
+                "id": 1
+            },
+        "semester": 
+            {
+                "id": 1
+            },
+        "batch": "2020-21",
+        "dob": "2000-08-23"
+    },
+    {
+        "name": "NEHA DOLUI",
+        "email": "monish.paul2000@gmail.com",
+        "universityRollNumber": "201160100110045",
+        "contactNumber": "6290442416",
+        "collageRollNumber": "CSE/2020/004",
+        "examRollNumber": "11600220034",
+        "department": 
+            {
+                "id": 1
+            },
+        "semester": 
+            {
+                "id": 1
+            },
+        "batch": "2020-21",
+        "dob": "2000-08-23"
+    },
+    {
+        "name": "NIRMALLYA MAJI",
+        "email": "monish.paul2000@gmail.com",
+        "universityRollNumber": "201160100110015",
+        "contactNumber": "6290442416",
+        "collageRollNumber": "CSE/2020/025",
+        "examRollNumber": "11600220035",
+        "department": 
+            {
+                "id": 1
+            },
+        "semester": 
+            {
+                "id": 1
+            },
+        "batch": "2020-21",
+        "dob": "2000-08-23"
+    },
+    {
+        "name": "NITU KUMARI",
+        "email": "monish.paul2000@gmail.com",
+        "universityRollNumber": "201160100110058",
+        "contactNumber": "6290442416",
+        "collageRollNumber": "CSE/2020/053",
+        "examRollNumber": "11600220036",
+        "department": 
+            {
+                "id": 1
+            },
+        "semester": 
+            {
+                "id": 1
+            },
+        "batch": "2020-21",
+        "dob": "2000-08-23"
+    },
+    {
+        "name": "PAVEL GHOSH",
+        "email": "monish.paul2000@gmail.com",
+        "universityRollNumber": "201160100110024",
+        "contactNumber": "6290442416",
+        "collageRollNumber": "CSE/2020/007",
+        "examRollNumber": "11600220037",
+        "department": 
+            {
+                "id": 1
+            },
+        "semester": 
+            {
+                "id": 1
+            },
+        "batch": "2020-21",
+        "dob": "2000-08-23"
+    },
+    {
+        "name": "PRATIK KUMAR AGARWAL",
+        "email": "monish.paul2000@gmail.com",
+        "universityRollNumber": "201160100110033",
+        "contactNumber": "6290442416",
+        "collageRollNumber": "CSE/2020/041",
+        "examRollNumber": "11600220038",
+        "department": 
+            {
+                "id": 1
+            },
+        "semester": 
+            {
+                "id": 1
+            },
+        "batch": "2020-21",
+        "dob": "2000-08-23"
+    },
+    {
+        "name": "PRIYAM CHAKRABORTY",
+        "email": "monish.paul2000@gmail.com",
+        "universityRollNumber": "201160100110032",
+        "contactNumber": "6290442416",
+        "collageRollNumber": "CSE/2020/028",
+        "examRollNumber": "11600220039",
+        "department": 
+            {
+                "id": 1
+            },
+        "semester": 
+            {
+                "id": 1
+            },
+        "batch": "2020-21",
+        "dob": "2000-08-23"
+    },
+    {
+        "name": "PRIYODEEP MUKHERJEE",
+        "email": "monish.paul2000@gmail.com",
+        "universityRollNumber": "201160100110029",
+        "contactNumber": "6290442416",
+        "collageRollNumber": "CSE/2020/021",
+        "examRollNumber": "11600220040",
+        "department": 
+            {
+                "id": 1
+            },
+        "semester": 
+            {
+                "id": 1
+            },
+        "batch": "2020-21",
+        "dob": "2000-08-23"
+    },
+    {
+        "name": "RAMIT KUMAR MANDAL",
+        "email": "monish.paul2000@gmail.com",
+        "universityRollNumber": "201160100110023",
+        "contactNumber": "6290442416",
+        "collageRollNumber": "CSE/2020/005",
+        "examRollNumber": "11600220041",
+        "department": 
+            {
+                "id": 1
+            },
+        "semester": 
+            {
+                "id": 1
+            },
+        "batch": "2020-21",
+        "dob": "2000-08-23"
+    },
+    {
+        "name": "ROHIT DEY",
+        "email": "monish.paul2000@gmail.com",
+        "universityRollNumber": "201160100110009",
+        "contactNumber": "6290442416",
+        "collageRollNumber": "CSE/2020/026",
+        "examRollNumber": "11600220042",
+        "department": 
+            {
+                "id": 1
+            },
+        "semester": 
+            {
+                "id": 1
+            },
+        "batch": "2020-21",
+        "dob": "2000-08-23"
+    },
+    {
+        "name": "SANGRAMJIT ROY",
+        "email": "monish.paul2000@gmail.com",
+        "universityRollNumber": "201160100110018",
+        "contactNumber": "6290442416",
+        "collageRollNumber": "CSE/2020/042",
+        "examRollNumber": "11600220044",
+        "department": 
+            {
+                "id": 1
+            },
+        "semester": 
+            {
+                "id": 1
+            },
+        "batch": "2020-21",
+        "dob": "2000-08-23"
+    },
+    {
+        "name": "SAYAN BHATTACHARYA",
+        "email": "monish.paul2000@gmail.com",
+        "universityRollNumber": "201160100110035",
+        "contactNumber": "6290442416",
+        "collageRollNumber": "CSE/2020/029",
+        "examRollNumber": "11600220045",
+        "department": 
+            {
+                "id": 1
+            },
+        "semester": 
+            {
+                "id": 1
+            },
+        "batch": "2020-21",
+        "dob": "2000-08-23"
+    },
+    {
+        "name": "SAYAN KUMAR DUTTA",
+        "email": "monish.paul2000@gmail.com",
+        "universityRollNumber": "201160100110036",
+        "contactNumber": "6290442416",
+        "collageRollNumber": "CSE/2020/049",
+        "examRollNumber": "11600220046",
+        "department": 
+            {
+                "id": 1
+            },
+        "semester": 
+            {
+                "id": 1
+            },
+        "batch": "2020-21",
+        "dob": "2000-08-23"
+    },
+    {
+        "name": "SOHAM BANERJEE",
+        "email": "monish.paul2000@gmail.com",
+        "universityRollNumber": "201160100110028",
+        "contactNumber": "6290442416",
+        "collageRollNumber": "CSE/2020/027",
+        "examRollNumber": "11600220047",
+        "department": 
+            {
+                "id": 1
+            },
+        "semester": 
+            {
+                "id": 1
+            },
+        "batch": "2020-21",
+        "dob": "2000-08-23"
+    },
+    {
+        "name": "SOHAM DATTA",
+        "email": "monish.paul2000@gmail.com",
+        "universityRollNumber": "201160100110020",
+        "contactNumber": "6290442416",
+        "collageRollNumber": "CSE/2020/001",
+        "examRollNumber": "11600220048",
+        "department": 
+            {
+                "id": 1
+            },
+        "semester": 
+            {
+                "id": 1
+            },
+        "batch": "2020-21",
+        "dob": "2000-08-23"
+    },
+    {
+        "name": "SOHAM DEY",
+        "email": "monish.paul2000@gmail.com",
+        "universityRollNumber": "201160100110039",
+        "contactNumber": "6290442416",
+        "collageRollNumber": "CSE/2020/016",
+        "examRollNumber": "11600220049",
+        "department": 
+            {
+                "id": 1
+            },
+        "semester": 
+            {
+                "id": 1
+            },
+        "batch": "2020-21",
+        "dob": "2000-08-23"
+    },
+    {
+        "name": "SOHAM KUNDU",
+        "email": "monish.paul2000@gmail.com",
+        "universityRollNumber": "201160100110052",
+        "contactNumber": "6290442416",
+        "collageRollNumber": "CSE/2020/056",
+        "examRollNumber": "11600220050",
+        "department": 
+            {
+                "id": 1
+            },
+        "semester": 
+            {
+                "id": 1
+            },
+        "batch": "2020-21",
+        "dob": "2000-08-23"
+    },
+    {
+        "name": "SOUMABHA BISWAS",
+        "email": "monish.paul2000@gmail.com",
+        "universityRollNumber": "201160100110031",
+        "contactNumber": "6290442416",
+        "collageRollNumber": "CSE/2020/051",
+        "examRollNumber": "11600220051",
+        "department": 
+            {
+                "id": 1
+            },
+        "semester": 
+            {
+                "id": 1
+            },
+        "batch": "2020-21",
+        "dob": "2000-08-23"
+    },
+    {
+        "name": "SOURAV CHANDRA",
+        "email": "monish.paul2000@gmail.com",
+        "universityRollNumber": "201160100110047",
+        "contactNumber": "6290442416",
+        "collageRollNumber": "CSE/2020/013",
+        "examRollNumber": "11600220052",
+        "department": 
+            {
+                "id": 1
+            },
+        "semester": 
+            {
+                "id": 1
+            },
+        "batch": "2020-21",
+        "dob": "2000-08-23"
+    },
+    {
+        "name": "SROYON BHATTACHARJEE",
+        "email": "monish.paul2000@gmail.com",
+        "universityRollNumber": "201160100110040",
+        "contactNumber": "6290442416",
+        "collageRollNumber": "CSE/2020/032",
+        "examRollNumber": "11600220054",
+        "department": 
+            {
+                "id": 1
+            },
+        "semester": 
+            {
+                "id": 1
+            },
+        "batch": "2020-21",
+        "dob": "2000-08-23"
+    },
+    {
+        "name": "SUBIR SARKAR",
+        "email": "monish.paul2000@gmail.com",
+        "universityRollNumber": "201160100110008",
+        "contactNumber": "6290442416",
+        "collageRollNumber": "CSE/2020/039",
+        "examRollNumber": "11600220055",
+        "department": 
+            {
+                "id": 1
+            },
+        "semester": 
+            {
+                "id": 1
+            },
+        "batch": "2020-21",
+        "dob": "2000-08-23"
+    },
+    {
+        "name": "SUCHI KUMARI",
+        "email": "monish.paul2000@gmail.com",
+        "universityRollNumber": "201160100110046",
+        "contactNumber": "6290442416",
+        "collageRollNumber": "CSE/2020/034",
+        "examRollNumber": "11600220056",
+        "department": 
+            {
+                "id": 1
+            },
+        "semester": 
+            {
+                "id": 1
+            },
+        "batch": "2020-21",
+        "dob": "2000-08-23"
+    },
+    {
+        "name": "SUKANTA ROY",
+        "email": "monish.paul2000@gmail.com",
+        "universityRollNumber": "201160100110007",
+        "contactNumber": "6290442416",
+        "collageRollNumber": "CSE/2020/031",
+        "examRollNumber": "11600220057",
+        "department": 
+            {
+                "id": 1
+            },
+        "semester": 
+            {
+                "id": 1
+            },
+        "batch": "2020-21",
+        "dob": "2000-08-23"
+    },
+    {
+        "name": "SULAGNA DEY",
+        "email": "monish.paul2000@gmail.com",
+        "universityRollNumber": "201160100110041",
+        "contactNumber": "6290442416",
+        "collageRollNumber": "CSE/2020/048",
+        "examRollNumber": "11600220058",
+        "department": 
+            {
+                "id": 1
+            },
+        "semester": 
+            {
+                "id": 1
+            },
+        "batch": "2020-21",
+        "dob": "2000-08-23"
+    },
+    {
+        "name": "SUMAN MANDAL",
+        "email": "monish.paul2000@gmail.com",
+        "universityRollNumber": "201160100110034",
+        "contactNumber": "6290442416",
+        "collageRollNumber": "CSE/2020/054",
+        "examRollNumber": "11600220059",
+        "department": 
+            {
+                "id": 1
+            },
+        "semester": 
+            {
+                "id": 1
+            },
+        "batch": "2020-21",
+        "dob": "2000-08-23"
+    },
+    {
+        "name": "TITHI JANA",
+        "email": "monish.paul2000@gmail.com",
+        "universityRollNumber": "201160100110048",
+        "contactNumber": "6290442416",
+        "collageRollNumber": "CSE/2020/036",
+        "examRollNumber": "11600220060",
+        "department": 
+            {
+                "id": 1
+            },
+        "semester": 
+            {
+                "id": 1
+            },
+        "batch": "2020-21",
+        "dob": "2000-08-23"
+    },
+    {
+        "name": "TRISHITA ROY",
+        "email": "monish.paul2000@gmail.com",
+        "universityRollNumber": "201160100110014",
+        "contactNumber": "6290442416",
+        "collageRollNumber": "CSE/2020/015",
+        "examRollNumber": "11600220061",
+        "department": 
+            {
+                "id": 1
+            },
+        "semester": 
+            {
+                "id": 1
+            },
+        "batch": "2020-21",
+        "dob": "2000-08-23"
+    },
+    {
+        "name": "UTKARSH KUMAR SINGH",
+        "email": "monish.paul2000@gmail.com",
+        "universityRollNumber": "201160100110051",
+        "contactNumber": "6290442416",
+        "collageRollNumber": "CSE/2020/037",
+        "examRollNumber": "11600220062",
+        "department": 
+            {
+                "id": 1
+            },
+        "semester": 
+            {
+                "id": 1
+            },
+        "batch": "2020-21",
+        "dob": "2000-08-23"
+    },
+    {
+        "name": "YOGITA SARAWAGI",
+        "email": "monish.paul2000@gmail.com",
+        "universityRollNumber": "201160100110006",
+        "contactNumber": "6290442416",
+        "collageRollNumber": "CSE/2020/012",
+        "examRollNumber": "11600220063",
+        "department": 
+            {
+                "id": 1
+            },
+        "semester": 
+            {
+                "id": 1
+            },
+        "batch": "2020-21",
+        "dob": "2000-08-23"
+    },
+    {
+        "name": "ANIKET BERA",
+        "email": "monish.paul2000@gmail.com",
+        "universityRollNumber": "211160100120003",
+        "contactNumber": "6290442416",
+        "collageRollNumber": "CSE/2020/074",
+        "examRollNumber": "11600221064",
+        "department": 
+            {
+                "id": 1
+            },
+        "semester": 
+            {
+                "id": 1
+            },
+        "batch": "2021-22",
+        "dob": "2000-08-23"
+    },
+    {
+        "name": "DONA MONDAL",
+        "email": "monish.paul2000@gmail.com",
+        "universityRollNumber": "211160100120006",
+        "contactNumber": "6290442416",
+        "collageRollNumber": "CSE/2020/075",
+        "examRollNumber": "11600221066",
+        "department": 
+            {
+                "id": 1
+            },
+        "semester": 
+            {
+                "id": 1
+            },
+        "batch": "2021-22",
+        "dob": "2000-08-23"
+    },
+    {
+        "name": "MONISH PAUL",
+        "email": "monish.paul2000@gmail.com",
+        "universityRollNumber": "211160100120004",
+        "contactNumber": "6290442416",
+        "collageRollNumber": "CSE/2020/072",
+        "examRollNumber": "11600221067",
+        "department": 
+            {
+                "id": 1
+            },
+        "semester": 
+            {
+                "id": 1
+            },
+        "batch": "2021-22",
+        "dob": "2000-08-23"
+    },
+    {
+        "name": "SAIKAT CHATTERJEE",
+        "email": "monish.paul2000@gmail.com",
+        "universityRollNumber": "211160100120001",
+        "contactNumber": "6290442416",
+        "collageRollNumber": "CSE/2020/073",
+        "examRollNumber": "11600221068",
+        "department": 
+            {
+                "id": 1
+            },
+        "semester": 
+            {
+                "id": 1
+            },
+        "batch": "2021-22",
+        "dob": "2000-08-23"
+    },
+    {
+        "name": "SAYAN KUMAR SADHUKHAN",
+        "email": "monish.paul2000@gmail.com",
+        "universityRollNumber": "211160100120002",
+        "contactNumber": "6290442416",
+        "collageRollNumber": "CSE/2020/071",
+        "examRollNumber": "11600221069",
+        "department": 
+            {
+                "id": 1
+            },
+        "semester": 
+            {
+                "id": 1
+            },
+        "batch": "2021-22",
+        "dob": "2000-08-23"
+    },
+    {
+        "name": "ANAMIKA TIWARY",
+        "email": "monish.paul2000@gmail.com",
+        "universityRollNumber": "201160100110065",
+        "contactNumber": "6290442416",
+        "collageRollNumber": "CSE/2020/065",
+        "examRollNumber": "11600520003",
+        "department": 
+            {
+                "id": 1
+            },
+        "semester": 
+            {
+                "id": 1
+            },
+        "batch": "2020-21",
+        "dob": "2000-08-23"
+    },
+    {
+        "name": "MOHAMMAD AFTAB ANSARI",
+        "email": "monish.paul2000@gmail.com",
+        "universityRollNumber": "201160100110066",
+        "contactNumber": "6290442416",
+        "collageRollNumber": "CSE/2020/066",
+        "examRollNumber": "11600720027",
+        "department": 
+            {
+                "id": 1
+            },
+        "semester": 
+            {
+                "id": 1
+            },
+        "batch": "2020-21",
+        "dob": "2000-08-23"
+    },
+    {
+        "name": "MOHAMMAD SHAKIR",
+        "email": "monish.paul2000@gmail.com",
+        "universityRollNumber": "201160100110067",
+        "contactNumber": "6290442416",
+        "collageRollNumber": "CSE/2020/067",
+        "examRollNumber": "11600720028",
+        "department": 
+            {
+                "id": 1
+            },
+        "semester": 
+            {
+                "id": 1
+            },
+        "batch": "2020-21",
+        "dob": "2000-08-23"
+    },
+    {
+        "name": "RAMJEE RAI",
+        "email": "monish.paul2000@gmail.com",
+        "universityRollNumber": "201160100110064",
+        "contactNumber": "6290442416",
+        "collageRollNumber": "CSE/2020/064",
+        "examRollNumber": "11600720034",
+        "department": 
+            {
+                "id": 1
+            },
+        "semester": 
+            {
+                "id": 1
+            },
+        "batch": "2020-21",
+        "dob": "2000-08-23"
+    },
+    {
+        "name": "RUDRANEEL GHOSH",
+        "email": "monish.paul2000@gmail.com",
+        "universityRollNumber": "201160100110068",
+        "contactNumber": "6290442416",
+        "collageRollNumber": "CSE/2020/068",
+        "examRollNumber": "11600720038",
+        "department": 
+            {
+                "id": 1
+            },
+        "semester": 
+            {
+                "id": 1
+            },
+        "batch": "2020-21",
+        "dob": "2000-08-23"
+    },
+    {
+        "name": "SHIBANGI KARMAKAR",
+        "email": "monish.paul2000@gmail.com",
+        "universityRollNumber": "201160100110069",
+        "contactNumber": "6290442416",
+        "collageRollNumber": "CSE/2020/069",
+        "examRollNumber": "11600720044",
+        "department": 
+            {
+                "id": 1
+            },
+        "semester": 
+            {
+                "id": 1
+            },
+        "batch": "2020-21",
+        "dob": "2000-08-23"
+    }

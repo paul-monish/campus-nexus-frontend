@@ -14,12 +14,11 @@ import Radio from '@mui/material/Radio';
 import RadioGroup from '@mui/material/RadioGroup';
 import FormControl from '@mui/material/FormControl';
 import FormLabel from '@mui/material/FormLabel';
-
+import Swal from 'sweetalert2'
 import { getEnrolledInfo,getSubject,elective,addEnroll} from '../services/user-service';
 import { useEffect} from 'react';
 import { useNavigate } from 'react-router-dom';
 import { getCurrentUserDetails } from '../auth/authenticate';
-
 const ColoredLine = () => (
   <div sx={{ marginTop: "10px", marginBottom: "10px" }}>
     <hr style={{
@@ -32,6 +31,11 @@ const ColoredLine = () => (
     }} />
   </div>
 )
+//add
+function createSub(id,subjectCode,subjectName) {
+  return {id,subjectCode,subjectName};
+}
+//
 
 function createData(ID,PAPER_CODE, PAPER_NAME, PAPER_TYPE) {
   return { ID,PAPER_CODE, PAPER_NAME, PAPER_TYPE };
@@ -54,8 +58,12 @@ const useStyles = makeStyles((theme) => ({
 const paperStyle = { padding: 20, height: '720px', width: "750px", margin: "120px auto", borderRadius: 10 }
 
 const Enrollment = () => {
+  const navigate =useNavigate();
+
   const classes = useStyles();
   const [activeStep, setActiveStep] = useState(0);
+
+
 
   const handleNext = (e) => {
     if (activeStep < steps.length - 1) {
@@ -64,23 +72,39 @@ const Enrollment = () => {
     }
     else{
       //api call
-      
-      console.log("hh")
-      // setpayload()
-      // setPayload({...payload,subject:sub})
-      console.log(payload);
-      addEnroll(payload).then((data)=>{
-        //setSubject(data)
+      console.log(payload)
+      try{
+        addEnroll(payload).then((data)=>{
        console.log(data);
-        
-    }).catch((error)=>{
-      console.log(error)
-      if(error.response.status === 400 || error.response.status === 404)
-        alert(error.response.data.message)
-    })
+       Swal.fire({
+        // position: "top-end",
+        icon: "success",
+        title: "Your work has been saved",
+        showConfirmButton: false,
+        timer: 1500
+      });
+      fetch(`http://localhost:5001/api/v1/permanent/enroll?uRoll=${payload.universityRollNumber}`)
+      window.location.href = `http://localhost:5001/api/v1/permanent/enroll?uRoll=${payload.universityRollNumber}`
+      }).catch((error)=>{
+        console.log(error)
+        if(error.response.status === 400 || error.response.status === 404){
+          console.log(error.response.data.message)
+          Swal.fire({
+            icon: "error",
+            title: "Oops...",
+            text: error.response.data.message|"Something went wrong!",
+            // footer: '<a href="#">Why do I have this issue?</a>'
+          });
+        }
+          
+      })
+      }catch(error){
+        alert(error)
+      }
+      
+      
       e.preventDefault();
     }
-    
   };
 
   const handleBack = () => {
@@ -101,9 +125,7 @@ const Enrollment = () => {
       examRollNumber:'',
       semester:{},
       department:{},
-      enrolled:'',
-      subject:[{id:''}],
-    
+      enrolled:'',  
   }});
   //
   const[payload,setPayload]=useState({
@@ -132,39 +154,47 @@ const Enrollment = () => {
         subjectName:''
        }    
     ],
+    semester:{
+      id: '',
+      deptName: '',
+      created_on: ''
+    },
     enrolled: false,
     lateral: false,
     streamChanger: false
 })
 //
-  const[sub,setSub]=useState([{id:'',subjectCode:'',subjectName:''}])
+  const[sub,setSub]=useState([{id:165,subjectCode:'OE-IT701B',subjectName:'Cyber Law and Security Policy'}])
 
   const handleValueChange = (e) => {
-    alert(e.target.value);
-    optionalRows.filter((s)=>(s.ID===parseInt(e.target.value))==true).map((s)=>{
+    alert(e.target.value); 
+    optionalRows.filter((s)=>(s.ID===parseInt(e.target.value))).map((s)=>{
       console.log(s);
-      setSub([...sub,{
+      return setSub([...sub,{
         id:s.ID,
         subjectCode: s.PAPER_CODE,
         subjectName:s.PAPER_NAME
       }])
     })
-    
-     //enroll.user["subject"]=sub
      console.log(sub);
-     setPayload({...payload,subject:sub})
-     console.log("up")
-     console.log(payload);
-     // setSelectedValue({...selectedValue,'id':event.target.value});
-     // setActive(true);
-     // chnageAmountOnSelect(parseInt(event.target.value))
+     payload["subject"]=sub
+    //  setPayload({...payload,subject:sub})
+    //  console.log("up")
+    //  console.log(payload);
    };
   const [rows,setRows]=useState([{}])
   const [optionalRows,setOptionalRows]=useState([[{}]])
-    const[electiveNo,setElectiveNo]=useState([{
+  const[electiveNo,setElectiveNo]=useState([{
     id:'',
     electiveNo:''
   }])
+//add
+const getSubs=(data)=>{
+  return data.filter((s)=>s.active===true && s.optional===false).map((s)=>{
+      return createSub(s.id,s.subjectCode,s.subjectName)
+  })
+}
+//
   const getRows=(data)=>{
     return data.filter((s)=>s.active===true && s.optional===false).map((s)=>{
         return createData(s.id,s.subjectCode,s.subjectName,'T')
@@ -180,12 +210,15 @@ const Enrollment = () => {
       return createElectiveRow(s.id,s.electiveNo)
     })
   }
-  //const navigate =useNavigate();
+
 
   const getSub=(semId,deptId)=>{
     getSubject(semId,deptId).then((data)=>{
         //setSubject(data)
         setRows(getRows(data))
+
+        setSub(getSubs(data))//add
+
         setOptionalRows(getOptionalRows(data))
     }).catch((error)=>{
       console.log(error)
@@ -206,23 +239,28 @@ const Enrollment = () => {
         alert(error.response.data)
     })
   }
+
   const getEnroll=(uId)=>{
     getEnrolledInfo(uId).then((data)=>{
       console.log(data)
+      if(data===null){
+        Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: "fees yet not payed or student alreay enrolled!",
+          // footer: '<a href="#">Why do I have this issue?</a>'
+        });
+        navigate("/user/dashboard")
+      }
       setEnroll(data);
       setpayload(data)
       
     }).catch((error)=>{
       console.log(error);
-      if(error.response.status === 400 || error.response.status === 404 || error.response.data.status === "false" || error.response.status === 401)
-       if(error.response.data===""){ 
-        // navigate("/user/dashboard")
-      }
     })
   }
+
   const setpayload=(enroll)=>{
-    console.log("ff")
-    console.log(enroll);
     setPayload({...payload,
       name: enroll.user.name,
       email: enroll.user.email,
@@ -236,26 +274,37 @@ const Enrollment = () => {
           deptName: enroll.user.department.deptName,
           created_on: enroll.user.department.created_on,
       },
+      semester:{
+        id: enroll.user.semester.id,
+        name: enroll.user.semester.name,
+        created_on: enroll.user.semester.created_on
+      },
       roles: enroll.user.roles,
-      subject:[{}],
+      subject:[{
+          id:'',
+          subjectCode:'',
+          subjectName:''
+      }],
       enrolled: 1,
       lateral: false,
       streamChanger: false
     })
   }
+
   useEffect(()=>{
     setUser(getCurrentUserDetails());
    
-   
-    if(user.universityRollNumber!==undefined){
+    if(user?.universityRollNumber!==undefined){
       //call api
-      getEnroll(user.universityRollNumber)
-      
-      getSub(user.semester.id,user.department.id)
-      elec(user.semester.id,user.department.id)
-      
+      try{
+        getEnroll(user?.universityRollNumber)
+        getSub(user?.semester.id,user.department.id)
+        elec(user?.semester.id,user.department.id)
+      }catch(error){
+        alert(error)
+      }
     }
-  },[user.universityRollNumber,user.semester.id,user.department.id]);
+  },[user?.universityRollNumber,user?.semester.id,user?.department.id]);
 
   const getStepContent = (step) => {
     
@@ -265,6 +314,7 @@ const Enrollment = () => {
           <div >
             <Typography align="center" variant="h5" gutterBottom marginBottom={1} marginTop={3}><b>MCKV INSTITUTE OF ENGINEERING</b></Typography>
 
+            {/* {JSON.stringify(sub)} */}
             <Typography align="center" gutterBottom marginBottom={0} marginTop={1}>243, G.T. ROAD (NORTH) LILUAH, HOWRAH-711204, WEST BENGAL, INDIA</Typography>
 
             <Typography align="center" gutterBottom marginBottom={1} marginTop={1} sx={{ fontSize: '.8rem' }}>(An Autonomous Institution Affiliated to Maulana Abul Kalam Azad University of Technology)</Typography>
@@ -274,27 +324,27 @@ const Enrollment = () => {
 
             <Stack direction={'row'} spacing={2} marginTop={1} >
               <Typography gutterBottom fontWeight={1000} sx={{ fontFamily: 'Roboto', fontSize: 15, textAlign: "center" }}> <b>Enrollment For :</b> </Typography>
-              <Typography gutterBottom fontWeight={350} sx={{ fontFamily: 'Roboto', fontSize: 15, textAlign: "center" }}>{enroll.user.semester.name} Enrollment 2021-22 </Typography>
+              <Typography gutterBottom fontWeight={350} sx={{ fontFamily: 'Roboto', fontSize: 15, textAlign: "center" }}>{enroll?.user.semester.name} Enrollment 2021-22 </Typography>
             </Stack>
 
             <Stack direction={'row'} spacing={2}>
               <Typography fontWeight={1000} sx={{ fontFamily: 'Roboto', fontSize: 15, textAlign: "center" }}>Name :</Typography>
-              <Typography fontWeight={350} sx={{ fontFamily: 'Roboto', fontSize: 15, textAlign: "center" }}> {enroll.user.name} </Typography>
+              <Typography fontWeight={350} sx={{ fontFamily: 'Roboto', fontSize: 15, textAlign: "center" }}> {enroll?.user.name} </Typography>
             </Stack>
 
             <Stack direction={'row'} spacing={2}>
               <Typography fontWeight={1000} sx={{ fontFamily: 'Roboto', fontSize: 15, textAlign: "center" }}>For the Degree of :</Typography>
-              <Typography fontWeight={350} sx={{ fontFamily: 'Roboto', fontSize: 15, textAlign: "center" }}>Bachelors Degree in B.Tech. in {enroll.user.department.deptName}</Typography>
+              <Typography fontWeight={350} sx={{ fontFamily: 'Roboto', fontSize: 15, textAlign: "center" }}>Bachelors Degree in B.Tech. in {enroll?.user.department.deptName}</Typography>
             </Stack>
 
             <Stack direction={'row'} spacing={2}>
               <Typography fontWeight={1000} sx={{ fontFamily: 'Roboto', fontSize: 15, textAlign: "center" }}> Registration No. With Year :</Typography>
-              <Typography fontWeight={350} sx={{ fontFamily: 'Roboto', fontSize: 15, textAlign: "center" }}>{enroll.user.universityRollNumber} OF 2021-2022</Typography>
+              <Typography fontWeight={350} sx={{ fontFamily: 'Roboto', fontSize: 15, textAlign: "center" }}>{enroll?.user.universityRollNumber} OF 2021-2022</Typography>
             </Stack>
 
             <Stack direction={'row'} spacing={2} marginBottom={2}>
               <Typography fontWeight={1000} sx={{ fontFamily: 'Roboto', fontSize: 15, textAlign: "center" }}> Roll No. :</Typography>
-              <Typography fontWeight={350} sx={{ fontFamily: 'Roboto', fontSize: 15, textAlign: "center" }}>{enroll.user.examRollNumber}</Typography>
+              <Typography fontWeight={350} sx={{ fontFamily: 'Roboto', fontSize: 15, textAlign: "center" }}>{enroll?.user.examRollNumber}</Typography>
             </Stack>
 
             <Typography gutterBottom sx={{ fontSize: '1rem' }}>COMPULSORY PAPERS</Typography>

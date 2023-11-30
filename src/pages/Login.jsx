@@ -9,7 +9,7 @@ import { doLogin } from '../auth/authenticate';
 import { useNavigate } from 'react-router-dom';
 
 export const Login = () => {
-  const paperStyle = { padding: 20, height: '440px', width: "280px", margin: "7vh auto", borderRadius: 10 }
+  const paperStyle = { padding: 20, height: '480px', width: "280px", margin: "7vh auto", borderRadius: 10 }
   const avatarStyle = { backgroundColor: '#1bbd7e', height: "60px", width: "60px" }
   const btnstyle = { margin: '8px 0' }
 

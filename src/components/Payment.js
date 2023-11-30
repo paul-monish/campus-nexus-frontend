@@ -88,7 +88,7 @@ function Payment() {
            
             {/* {JSON.stringify(data) }
             {JSON.stringify(user) } */}
-            {JSON.stringify(sem) }
+            {/* {JSON.stringify(sem) } */}
             <div>Pay Fees:</div>
             <form onSubmit={handleForm}>
               {/* <select id="sem" name="sem" onChange={(e)=>{setSem({...sem,'id':e.target.value})}}>
