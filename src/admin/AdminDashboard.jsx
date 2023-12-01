@@ -2,6 +2,7 @@ import React from 'react'
 import Header from './Header'
 import SideNav from './SideNav'
 import Footer from './Footer'
+import { Link } from 'react-router-dom'
 const AdminDashboard = () => {
   return (
     <div className="wrapper">
@@ -19,7 +20,7 @@ const AdminDashboard = () => {
             </div>
             <div className="col-sm-6">
             <ol className="breadcrumb float-sm-right">
-                <li className="breadcrumb-item"><a href="#">Home</a></li>
+                <li className="breadcrumb-item"><Link to="#">Home</Link></li>
                 <li className="breadcrumb-item active">DataTables</li>
             </ol>
             </div>

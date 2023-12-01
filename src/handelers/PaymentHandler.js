@@ -74,11 +74,11 @@ export default async function displayRazorpay(data){
                 Swal.fire({
                     // position: "top-end",
                     icon: "success",
-                    title: "Successfully Payment!",
+                    title: "Your Payment Is Successfull!",
                     showConfirmButton: false,
                     timer: 1500
                   });
-            
+                  window.location.reload(true);
             }
             else{
                 Swal.fire({

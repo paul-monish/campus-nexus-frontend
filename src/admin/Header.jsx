@@ -1,6 +1,7 @@
 import React from 'react'
 import AdminLogout from './AdminLogout'
-import { useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom'
+// import { useLocation } from 'react-router-dom';
 const Header = () => {
     
   return (
@@ -10,13 +11,13 @@ const Header = () => {
     {/* Left navbar links */}
     <ul className="navbar-nav">
         <li className="nav-item">
-        <a className="nav-link" data-widget="pushmenu" href="#" role="button"><i className="fas fa-bars" /></a>
+        <Link className="nav-link" data-widget="pushmenu" to="#" role="button"><i className="fas fa-bars" /></Link>
         </li>
         <li className="nav-item d-none d-sm-inline-block">
-        <a href="index3.html" className="nav-link">Home</a>
+        <Link to="/admin/admin-dashboard" className="nav-link">Dashboard</Link>
         </li>
         <li className="nav-item d-none d-sm-inline-block">
-        <a href="#" className="nav-link">Contact</a>
+        <Link to="#" className="nav-link">Contact</Link>
         </li>
        
     </ul>

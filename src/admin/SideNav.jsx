@@ -13,19 +13,19 @@ const SideNav = () => {
     {/* Main Sidebar Container */}
     <aside className="main-sidebar  elevation-4" style={{backgroundColor: "#202c5c"}}>
     {/* Brand Logo */}
-    <a href="#" className="brand-link">
+    <Link to="#" className="brand-link">
         <img src="/dist/img/campus_nexus_logo.png" alt="AdminLTE Logo" className="brand-image img-circle elevation-3" style={{opacity: '.8'}} />
         <span className="brand-text font-weight-light" style={{color:"#f2f2f2"}}>Campus Nexus</span>
-    </a>
+    </Link>
     {/* Sidebar */}
     <div className="sidebar">
         {/* Sidebar user panel (optional) */}
         <div className="user-panel mt-3 pb-3 mb-3 d-flex">
         <div className="image">
-            <img src="/dist/img/user.png" className="img-circle elevation-2" alt="User Image" />
+            <img src="/dist/img/user.png" className="img-circle elevation-2" alt="User" />
         </div>
         <div className="info">
-            <span href="#" className="d-block" style={{color:"#f2f2f2"}}>{user.name}</span>
+            <Link to="#" className="d-block" style={{color:"#f2f2f2"}}>{user.name}</Link>
         </div>
         </div>
         {/* SidebarSearch Form */}

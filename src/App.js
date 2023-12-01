@@ -13,9 +13,7 @@ import { useEffect, useState } from 'react';
 import { myAxios, privateAxios } from './services/helper';
 import MakePayment from '../src/pages/MakePayment';
 import Logout from './components/Logout';
-import { getCurrentUserDetails } from "./auth/authenticate";
-import { isRedisCacheActive } from './services/user-service';
-import { isLoggedIn } from './auth/authenticate';
+
 
 import Enrollment from './pages/Enrollment';
 import Dashboard from './pages/Dashboard';
@@ -27,7 +25,7 @@ import DefaulterList from './admin/DefaulterList';
 import AdminLogin from './admin/AdminLogin';
 function App() {
   const [loading,setLoading]=useState(false);
-  const[user,setUser]=useState({});    
+  // const[user,setUser]=useState({});    
   useEffect(()=>{
     //request interceptor
     myAxios.interceptors.request.use((config)=>{

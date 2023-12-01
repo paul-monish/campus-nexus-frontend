@@ -9,7 +9,8 @@ import "jquery-ui-dist/jquery-ui"
 import { getSemesters } from '../services/semester-service'
 import {useRef} from 'react';
 import { useDownloadExcel } from 'react-export-table-to-excel';
-import { useLocation } from 'react-router-dom'
+// import { useLocation } from 'react-router-dom'
+import Swal from 'sweetalert2'
 const DefaulterList = () => {
     const tableRef = useRef(null);
 
@@ -66,6 +67,12 @@ const handleValueChange = (event) => {
     case 6:getDefaulterList('sem6');break;
     case 7:getDefaulterList('sem7');break;
     case 8:getDefaulterList('sem8');break;
+    default:
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Something went wrong!",
+      });
    }
   };
 const [semList,setSemList]=useState([{
@@ -88,8 +95,8 @@ const [semList,setSemList]=useState([{
     });
   }
 
-  const location = useLocation()
-    const path=location.pathname
+  // const location = useLocation()
+  // const path=location.pathname
   return (
     <div className="wrapper">
         <Header/>

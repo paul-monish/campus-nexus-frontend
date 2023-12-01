@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 import { login } from '../services/user-service';
 import { doLogin } from '../auth/authenticate';
 import { useNavigate } from 'react-router-dom';
+import Swal from 'sweetalert2'
 
 export const Login = () => {
   const paperStyle = { padding: 20, height: '480px', width: "280px", margin: "7vh auto", borderRadius: 10 }
@@ -41,7 +42,11 @@ export const Login = () => {
     e.preventDefault()
     //data validate
     if(user.username.trim()==='' || user.password.trim()===''){
-      alert("credential is required!!")
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Credential Is Required!",
+      });
       return;
     }
     //call api
@@ -50,13 +55,23 @@ export const Login = () => {
       //save
       doLogin(data,()=>{
         //redirect
+        Swal.fire({
+          icon: "success",
+          title: "Successfully Loged In",
+          showConfirmButton: false,
+          timer: 1500
+        });
         navigate("/user/dashboard")
       })
     }).catch((error)=>{
       // console.log(error)
       console.log(error);
       if(error.response.status === 400 || error.response.status === 404 || error.response.data.status === "false" || error.response.status === 401)
-        alert(error.response.data.message)
+        Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: error.response.data.message??"Something Went Wrong!",
+        });
         resetUser()
     })
 
@@ -96,7 +111,7 @@ export const Login = () => {
        </form>
 
         <Typography >
-          <Link to={"forgot"}> Forgot password? </Link>
+          <Link to={"/forgot"}> Forgot password? </Link>
         </Typography>
 
       </Paper>

@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import AppBar from '@mui/material/AppBar';
 import { Grid, Paper, Typography, Button, Box, FormHelperText } from '@mui/material'
 import Toolbar from '@mui/material/Toolbar';
 import Table from '@mui/material/Table';
@@ -21,18 +20,10 @@ import Select from '@mui/material/Select';
 import displayRazorpay from "../handelers/PaymentHandler";
 import { getCurrentUserDetails } from "../auth/authenticate";
 import { getSemesters } from "../services/semester-service";
-
+import AppBar from './appBar';
 import { getStudentPaymentRecord } from "../services/user-service"
 import Logout from "../components/Logout";
 // import Redis from "redis";
-const appBarTheme = createTheme({
-  palette: {
-    appbarColor: {
-      main: '#182c5c',
-      contrastText: '#fff',
-    },
-  },
-});
 
 const ColoredLine = () => (
   <div sx={{ marginTop: "10px", marginBottom: "10px" }}>
@@ -156,30 +147,11 @@ const MakePayment = () => {
     ratesFor('Tuition', '₹'+data.amount),
     ratesFor('Total', '₹'+data.amount),
   ];
-  
 
-// const rows = [
-//     createData('BTECH', 'First', '₹40000', 'Card'),
-//     createData('BTECH', 'Second', '₹40000', 'Card'),
-//     createData('BTECH', 'Third', '₹42000', 'Card'),
-//     createData('BTECH', 'Fourth', '₹42000', 'Card'),
-//     createData('BTECH', 'Fifth', '₹44000', 'UPI'),
-//   ];
 
   return (
     <>
-      <ThemeProvider theme={appBarTheme}>
-        <AppBar position='absolute' color="appbarColor">
-          <Toolbar>
-            <img src={logo2} alt="logo" className='nav-logo' />
-            <Logout/>
-            <Typography varient="h1" component='div' fontWeight={800} sx={{ flexGrow: 2, fontSize: 20, fontFamily: 'Montserrat' }} > </Typography>
-            <Stack direction='row' spacing={1}>
-            <img src={logo1} alt="mckvlogo2" height={50} width={300}/>
-            </Stack>
-          </Toolbar>
-        </AppBar>
-      </ThemeProvider>
+      <AppBar></AppBar>
       
       <Paper elevation={4} style={paperStyle} boxshadow={"5px 5px 5px "} border={1}>
         <Grid className='stud-info'>
@@ -254,14 +226,7 @@ const MakePayment = () => {
                 // value={selectedValue} 
                 onChange={(event)=>{handleValueChange(event)}}
               >
-                <MenuItem value="DEFAULT" disabled>Choose a Semester ...</MenuItem>
-                {/* <MenuItem value={2}>Second Sem</MenuItem>
-                <MenuItem value={3}>Third Sem</MenuItem>
-                <MenuItem value={4}>Fourth Sem</MenuItem>
-                <MenuItem value={5}>Fifth Sem</MenuItem>
-                <MenuItem value={6}>Sixth Sem</MenuItem>
-                <MenuItem value={7}>Seventh Sem</MenuItem>
-                <MenuItem value={8}>Eighth Sem</MenuItem> */}
+                <MenuItem value="DEFAULT" disabled>---Choose a Semester---</MenuItem>
                 {makeSemMenu()}
               </Select>
               <FormHelperText> Please select Semester </FormHelperText>

@@ -1,0 +1,261 @@
+[{
+    "subjectCode":"PE-CS701A",
+    "subjectName":"Quantum Computing",
+    "isActive":"false",
+    "isOptional":"1",
+    "department": {
+        "id": 1
+    },
+    "semester": {
+        "id": 7
+    },
+    "electiveNo":"PE-IV",
+    "paperType":"T"
+},
+{
+    "subjectCode":"PE-CS701B",
+    "subjectName":"Cloud Computing",
+    "isActive":"1",
+    "isOptional":"1",
+    "department": {
+        "id": 1
+    },
+    "semester": {
+        "id": 7
+    },
+    "electiveNo":"PE-IV",
+    "paperType":"T"
+},
+{
+    "subjectCode":"PE-CS701C",
+    "subjectName":"Neural Networks and Deep Learning",
+    "isActive":1,
+    "isOptional":1,
+    "department": {
+        "id": 1
+    },
+    "semester": {
+        "id": 7
+    },
+    "electiveNo":"PE-IV",
+    "paperType":"T"
+},
+
+{
+    "subjectCode":"PE-CS702A",
+    "subjectName":"Natural Language Processing",
+    "isActive":1,
+    "isOptional":1,
+    "department": {
+        "id": 1
+    },
+    "semester": {
+        "id": 7
+    },
+    "electiveNo":"PE-V",
+    "paperType":"T"
+},
+{
+    "subjectCode":"PE-CS702B",
+    "subjectName":"Block Chain Technology",
+    "isActive":1,
+    "isOptional":1,
+    "department": {
+        "id": 1
+    },
+    "semester": {
+        "id": 7
+    },
+    "electiveNo":"PE-V",
+    "paperType":"T"
+},
+{
+    "subjectCode":"PE-CS702C",
+    "subjectName":"Artificial Intelligence",
+    "isActive":1,
+    "isOptional":1,
+    "department": {
+        "id": 1
+    },
+    "semester": {
+        "id": 7
+    },
+    "electiveNo":"PE-V",
+    "paperType":"T"
+},
+
+{
+    "subjectCode":"OE-EC701A",
+    "subjectName":"Adhoc and Sensor Network",
+    "isActive":1,
+    "isOptional":1,
+    "department": {
+        "id": 1
+    },
+    "semester": {
+        "id": 7
+    },
+    "electiveNo":"OE-I",
+    "paperType":"T"
+},
+
+{
+    "subjectCode":"OE-EE701B",
+    "subjectName":"Control Systems",
+    "isActive":1,
+    "isOptional":1,
+    "department": {
+        "id": 1
+    },
+    "semester": {
+        "id": 7
+    },
+    "electiveNo":"OE-I",
+    "paperType":"T"
+},
+
+{
+    "subjectCode":"OE-IT701D",
+    "subjectName":"Multimedia Systems",
+    "isActive":1,
+    "isOptional":1,
+    "department": {
+        "id": 1
+    },
+    "semester": {
+        "id": 7
+    },
+    "electiveNo":"OE-I",
+    "paperType":"T"
+},
+
+{
+    "subjectCode":"OE-M701A",
+    "subjectName":"Operations Research and Optimizing Technique",
+    "isActive":1,
+    "isOptional":1,
+    "department": {
+        "id": 1
+    },
+    "semester": {
+        "id": 7
+    },
+    "electiveNo":"OE-I",
+    "paperType":"T"
+},
+{
+    "subjectCode":"OE-ME701B",
+    "subjectName":"Mechatronic Systems",
+    "isActive":1,
+    "isOptional":1,
+    "department": {
+        "id": 1
+    },
+    "semester": {
+        "id": 7
+    },
+    "electiveNo":"OE-I",
+    "paperType":"T"
+},
+{
+    "subjectCode":"OE-EC701C",
+    "subjectName":"Mobile Computing",
+    "isActive":1,
+    "isOptional":1,
+    "department": {
+        "id": 1
+    },
+    "semester": {
+        "id": 7
+    },
+    "electiveNo":"OE-II",
+    "paperType":"T"
+},
+
+{
+    "subjectCode":"OE-HU701B",
+    "subjectName":"Human Resource Development and Organizational Behavior",
+    "isActive":1,
+    "isOptional":1,
+    "department": {
+        "id": 1
+    },
+    "semester": {
+        "id": 7
+    },
+    "electiveNo":"OE-II",
+    "paperType":"T"
+},
+
+{
+    "subjectCode":"OE-IT701A",
+    "subjectName":"Introduction to Bioinformatics",
+    "isActive":1,
+    "isOptional":1,
+    "department": {
+        "id": 1
+    },
+    "semester": {
+        "id": 7
+    },
+    "electiveNo":"OE-II",
+    "paperType":"T"
+},
+{
+    "subjectCode":"OE-IT701B",
+    "subjectName":"Cyber Law and Security Policy",
+    "isActive":1,
+    "isOptional":1,
+    "department": {
+        "id": 1
+    },
+    "semester": {
+        "id": 7
+    },
+    "electiveNo":"OE-II",
+    "paperType":"T"
+},
+
+{
+    "subjectCode":"OE-ME701D",
+    "subjectName":"Robotics",
+    "isActive":1,
+    "isOptional":1,
+    "department": {
+        "id": 1
+    },
+    "semester": {
+        "id": 7
+    },
+    "electiveNo":"OE-II",
+    "paperType":"T"
+},
+
+{
+    "subjectCode":"PW-CS781",
+    "subjectName":"Project-II",
+    "isActive":1,
+    "isOptional":1,
+    "department": {
+        "id": 1
+    },
+    "semester": {
+        "id": 7
+    },
+    "electiveNo":"",
+    "paperType":"S"
+},
+{
+    "subjectCode":"PW-CS782",
+    "subjectName":"Summer Internship",
+    "isActive":1,
+    "isOptional":1,
+    "department": {
+        "id": 1
+    },
+    "semester": {
+        "id": 7
+    },
+    "electiveNo":"",
+    "paperType":"S"
+}]

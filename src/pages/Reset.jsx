@@ -6,8 +6,9 @@ import {changePassword }from '../services/user-service';
 import { useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { decrypt } from '../security/JWTSecurity';
+import Swal from 'sweetalert2';
 const Reset = () => {
-  const paperStyle = { padding: 20, height: '350px', width: '280px', margin: "90px auto", borderRadius: 10 }
+  const paperStyle = { padding: 20, height: '370px', width: '280px', margin: "90px auto", borderRadius: 10 }
   const avatarStyle = { backgroundColor: '#1bbd7e', height: "60px", width: "60px" }
   const btnstyle = { margin: '8px 0' }
     const navigate =useNavigate();
@@ -29,25 +30,44 @@ const Reset = () => {
          e.preventDefault()
          //data validate
          if(user.password.trim()==='' || user.cpassword.trim()===''){
-           alert("password is required!!")
+          Swal.fire({
+            icon: "error",
+            title: "Oops...",
+            text: "Password Is Required!",
+          });
            return;
          }
          if(user.password.trim()!==user.cpassword.trim()){
-            alert("password must be same!!")
+          Swal.fire({
+            icon: "error",
+            title: "Oops...",
+            text: "Password Must Be Same!",
+          });
             return;
           }
          //call api
          user['email']=data
          changePassword(user).then((data)=>{
            //save
-             alert(data.message);
+             Swal.fire({
+              icon: "success",
+              title: data.message??"Your Password Is Successfully Changed!",
+              showConfirmButton: false,
+              timer: 1500
+            });
              localStorage.removeItem('email')
              navigate("/login")
           
          }).catch((error)=>{
            console.log(error)
-           if(error.response.status === 400 || error.response.status === 404)
-             alert(error.response.data.message)
+           if(error.response.status === 400 || error.response.status === 404){
+            Swal.fire({
+              icon: "error",
+              title: "Oops...",
+              text: error.response.data.message|"Something Went Wrong!",
+            });
+            return
+           }
          })
      
         }

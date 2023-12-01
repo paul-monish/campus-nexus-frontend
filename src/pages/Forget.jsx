@@ -5,9 +5,9 @@ import LockResetOutlinedIcon from '@mui/icons-material/LockResetOutlined';
 import { sendOtpEmail } from '../services/user-service';
 import { useState } from 'react';
 import { encryptData } from '../security/JWTSecurity';
-
+import Swal from 'sweetalert2';
 const Forget = () => {
-    const paperStyle = { padding: 20, height: '300px', width: "280px", margin: "90px auto", borderRadius: 10 }
+    const paperStyle = { padding: 20, height: '320px', width: "280px", margin: "90px auto", borderRadius: 10 }
     const avatarStyle = { backgroundColor: '#1bbd7e', height: "60px", width: "60px" }
     const btnstyle = { margin: '8px 0' }
     const navigate = useNavigate();
@@ -26,7 +26,11 @@ const Forget = () => {
         e.preventDefault()
         //data validate
         if(user.email.trim()==='' ){
-          alert("email is required!!")
+            Swal.fire({
+                icon: "error",
+                title: "Oops...",
+                text:"Email-Id is required!",
+              });
           return;
         }
         //call api
@@ -36,13 +40,24 @@ const Forget = () => {
             // localStorage.setItem("otp",encryptData(data.message));
             sessionStorage.setItem("otp",encryptData(data.message))
             localStorage.setItem('email',encryptData(user.email))
+            Swal.fire({
+                icon: "success",
+                title: "OTP Send To Your Registered Email-Id, Check Your Mail!!",
+                showConfirmButton: false,
+                timer: 1500
+              });
             //redirect
             navigateToVerification()
          
         }).catch((error)=>{
           console.log(error)
-          if(error.response.status === 400 || error.response.status === 404)
-            alert(error.response.data.message)
+          if(error.response.status === 400 || error.response.status === 404){
+            Swal.fire({
+                icon: "error",
+                title: "Oops...",
+                text: error.response.data.message??"Something Went Wrong!",
+              });
+          }
         })
     
        }

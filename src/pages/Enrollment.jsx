@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Button, Stepper, Step, StepLabel, Typography, Container, Paper, Grid } from '@mui/material';
+import { Button, Stepper, Step, StepLabel, Typography, Container, Paper, Grid,Box,FormHelperText } from '@mui/material';
 import { makeStyles } from '@mui/styles';
 import AppBar from './appBar';
 import { Stack } from '@mui/joy';
@@ -9,16 +9,19 @@ import TableCell from '@mui/material/TableCell';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import TableContainer from '@mui/material/TableContainer';
-import FormControlLabel from '@mui/material/FormControlLabel';
-import Radio from '@mui/material/Radio';
-import RadioGroup from '@mui/material/RadioGroup';
+
 import FormControl from '@mui/material/FormControl';
-import FormLabel from '@mui/material/FormLabel';
+
 import Swal from 'sweetalert2'
 import { getEnrolledInfo,getSubject,elective,addEnroll} from '../services/user-service';
 import { useEffect} from 'react';
 import { useNavigate } from 'react-router-dom';
 import { getCurrentUserDetails } from '../auth/authenticate';
+
+import InputLabel from '@mui/material/InputLabel';
+import MenuItem from '@mui/material/MenuItem';
+import Select from '@mui/material/Select';
+
 const ColoredLine = () => (
   <div sx={{ marginTop: "10px", marginBottom: "10px" }}>
     <hr style={{
@@ -32,8 +35,8 @@ const ColoredLine = () => (
   </div>
 )
 //add
-function createSub(id,subjectCode,subjectName) {
-  return {id,subjectCode,subjectName};
+function createSub(id,subjectCode,subjectName,paperType) {
+  return {id,subjectCode,subjectName,paperType};
 }
 //
 
@@ -79,7 +82,7 @@ const Enrollment = () => {
        Swal.fire({
         // position: "top-end",
         icon: "success",
-        title: "Your work has been saved",
+        title: "Your Have Successfully Enrolled!",
         showConfirmButton: false,
         timer: 1500
       });
@@ -164,16 +167,18 @@ const Enrollment = () => {
     streamChanger: false
 })
 //
-  const[sub,setSub]=useState([{id:165,subjectCode:'OE-IT701B',subjectName:'Cyber Law and Security Policy'}])
+  const[sub,setSub]=useState([{id:'',subjectCode:'',subjectName:'',paperType:''}])
 
   const handleValueChange = (e) => {
-    alert(e.target.value); 
+    
     optionalRows.filter((s)=>(s.ID===parseInt(e.target.value))).map((s)=>{
+      alert(s.ID===parseInt(e.target.value))
       console.log(s);
       return setSub([...sub,{
         id:s.ID,
         subjectCode: s.PAPER_CODE,
-        subjectName:s.PAPER_NAME
+        subjectName:s.PAPER_NAME,
+        paperType:s.PAPER_TYPE
       }])
     })
      console.log(sub);
@@ -191,18 +196,18 @@ const Enrollment = () => {
 //add
 const getSubs=(data)=>{
   return data.filter((s)=>s.active===true && s.optional===false).map((s)=>{
-      return createSub(s.id,s.subjectCode,s.subjectName)
+      return createSub(s.id,s.subjectCode,s.subjectName,s.paperType)
   })
 }
 //
   const getRows=(data)=>{
     return data.filter((s)=>s.active===true && s.optional===false).map((s)=>{
-        return createData(s.id,s.subjectCode,s.subjectName,'T')
+        return createData(s.id,s.subjectCode,s.subjectName,s.paperType)
     })
   }
   const getOptionalRows=(data)=>{
       return data.filter((s)=>s.active===true && s.optional===true).map((s)=>{
-        return createOptionalRow(s.id,s.subjectCode,s.subjectName,s.electiveNo,'T')
+        return createOptionalRow(s.id,s.subjectCode,s.subjectName,s.electiveNo,s.paperType)
       })
   }
   const getElectiveRow=(data)=>{
@@ -320,11 +325,11 @@ const getSubs=(data)=>{
             <Typography align="center" gutterBottom marginBottom={1} marginTop={1} sx={{ fontSize: '.8rem' }}>(An Autonomous Institution Affiliated to Maulana Abul Kalam Azad University of Technology)</Typography>
             <ColoredLine />
 
-            <Typography sx={{ fontSize: '1.2rem' }} align="center" gutterBottom marginBottom={1} marginTop={2}><b>Enrollment Form 2021- 22 for REGULAR Students</b></Typography>
+            <Typography sx={{ fontSize: '1.2rem' }} align="center" gutterBottom marginBottom={1} marginTop={2}><b>Enrollment Form {enroll?.user.batch} for Regular Students</b></Typography>
 
             <Stack direction={'row'} spacing={2} marginTop={1} >
               <Typography gutterBottom fontWeight={1000} sx={{ fontFamily: 'Roboto', fontSize: 15, textAlign: "center" }}> <b>Enrollment For :</b> </Typography>
-              <Typography gutterBottom fontWeight={350} sx={{ fontFamily: 'Roboto', fontSize: 15, textAlign: "center" }}>{enroll?.user.semester.name} Enrollment 2021-22 </Typography>
+              <Typography gutterBottom fontWeight={350} sx={{ fontFamily: 'Roboto', fontSize: 15, textAlign: "center" }}>{enroll?.user.semester.name} Enrollment {enroll?.user.batch} </Typography>
             </Stack>
 
             <Stack direction={'row'} spacing={2}>
@@ -334,12 +339,12 @@ const getSubs=(data)=>{
 
             <Stack direction={'row'} spacing={2}>
               <Typography fontWeight={1000} sx={{ fontFamily: 'Roboto', fontSize: 15, textAlign: "center" }}>For the Degree of :</Typography>
-              <Typography fontWeight={350} sx={{ fontFamily: 'Roboto', fontSize: 15, textAlign: "center" }}>Bachelors Degree in B.Tech. in {enroll?.user.department.deptName}</Typography>
+              <Typography fontWeight={350} sx={{ fontFamily: 'Roboto', fontSize: 15, textAlign: "center" }}>Bachelors Degree in {enroll?.user.department.deptName}</Typography>
             </Stack>
 
             <Stack direction={'row'} spacing={2}>
               <Typography fontWeight={1000} sx={{ fontFamily: 'Roboto', fontSize: 15, textAlign: "center" }}> Registration No. With Year :</Typography>
-              <Typography fontWeight={350} sx={{ fontFamily: 'Roboto', fontSize: 15, textAlign: "center" }}>{enroll?.user.universityRollNumber} OF 2021-2022</Typography>
+              <Typography fontWeight={350} sx={{ fontFamily: 'Roboto', fontSize: 15, textAlign: "center" }}>{enroll?.user.universityRollNumber} Of {enroll?.user.batch}</Typography>
             </Stack>
 
             <Stack direction={'row'} spacing={2} marginBottom={2}>
@@ -373,7 +378,7 @@ const getSubs=(data)=>{
                         {row.PAPER_CODE}
                       </TableCell>
                       <TableCell sx={{ borderRight: '1px solid #ccc' }} align="center">{row.PAPER_NAME}</TableCell>
-                      <TableCell sx={{ borderRight: '1px solid #ccc' }} align="center">{row.PAPER_TYPE}</TableCell>
+                      <TableCell sx={{ borderRight: '1px solid #ccc' }} align="center">{row.PAPER_TYPE==='S'?'Sessional':row.PAPER_TYPE==='P'?'Practical':'Theory'}</TableCell>
                     </TableRow>
                   ))}
                 </TableBody>
@@ -385,20 +390,22 @@ const getSubs=(data)=>{
       case 1:
         return (
           <>
-            <Typography gutterBottom marginTop={3} sx={{ fontSize: '1.2rem' }}> SELECT ELECTIVE PAPERS</Typography> <ColoredLine />
-
-            <Grid>
-            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+          <Typography gutterBottom marginTop={3} sx={{ fontSize: '1.2rem' }}> SELECT ELECTIVE PAPERS</Typography> <ColoredLine />
+          {/* <Box width={230} marginTop={2}>  */}
+          <Box sx={{ flexGrow: 1 }}>
+          <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }} 
+          direction="row"
+          justifyContent="center"
+          alignItems="center"
+          // style={{ display: 'flex'}}
+          >
+          {/* <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}> */}
            {/* elective */}
-           <TableContainer component={Paper} sx={{ border: '0px solid #ccc' }}>
+           {/* <TableContainer component={Paper} sx={{ border: '0px solid #ccc' }}>
               <Table sx={{ minWidth: 650 }} size="small" aria-label="a dense table">
               <TableBody>
-              <TableRow
-                      key={1}
-                      sx={{ '&:last-child td, &:last-child th': { border: 'px solid #ccc' } }}
-
-              >
-              {
+              <TableRow key={1} sx={{ '&:last-child td, &:last-child th': { border: 'px solid #ccc' } }}> */}
+              {/* {
                 electiveNo.map((e)=>(
                   <TableCell sx={{ borderRight: '1px solid #ccc' }}
                         align="center" component="th" scope="row">
@@ -419,16 +426,49 @@ const getSubs=(data)=>{
 
               </TableCell>
               ))
-              }
-               </TableRow>
+              } */}
+
+                {/* <Typography variant="h6" gutterBottom marginBottom={1} marginTop={4}> Select semester for next payment</Typography> */}
+                {
+                  electiveNo.map((e,index)=>(
+                    <Grid item xs={2} sm={4} md={4} key={index}>
+                    {/* <TableCell sx={{ borderRight: '1px solid #ccc' }} align="center" component="th" scope="row">*/}
+                    {/* <Box width={230} marginTop={2}>  */}
+                      <FormControl fullWidth>
+                        <InputLabel label='' id="paper-select" required >Choose {e.ELECTIVE_NO} Paper</InputLabel>
+                        <Select
+                          labelId="paper-select"
+                          id={"paper-"+e.ELECTIVE_NO}
+                          defaultValue={'DEFAULT'}
+                          label="Paper"
+                          // value={selectedValue} 
+                          key={e.ELECTIVE_NO}
+                          name={"paper-"+e.ELECTIVE_NO}
+                          onChange={(event)=>{handleValueChange(event)}}
+                        >
+                          <MenuItem value="DEFAULT" disabled>---Choose a {e.ELECTIVE_NO} Paper---</MenuItem>
+                          {
+                            optionalRows.filter((o)=>o.ELECTIVE_NO===e.ELECTIVE_NO).map((s)=>(
+                              <MenuItem key={s.ID} value={s.ID}>{s.PAPER_NAME} {s.PAPER_TYPE==='S'?'(Sessional)':s.PAPER_TYPE==='P'?'(Practical)':'(Theory)'
+                              }</MenuItem>
+                            ))
+                          }
+                        </Select>
+                        <FormHelperText> Please select {e.ELECTIVE_NO} optional paper </FormHelperText>
+                      </FormControl>
+                      {/* </Box> */}
+                   {/* </TableCell> */}
+                    </Grid>
+                  ))
+                }
+               {/* </TableRow>
                </TableBody>
               </Table>
-            </TableContainer>
-              
-           
-              
-              </div>
+            </TableContainer> */}
+            {/* elective */}
+            {/* </div> */}
             </Grid>
+            </Box>
           </>
         );
 

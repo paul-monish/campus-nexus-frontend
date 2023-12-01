@@ -1,4 +1,4 @@
-﻿    {
+﻿    [{
         "name": "ABHISHEK MISHRA",
         "email": "monish.paul2000@gmail.com",
         "universityRollNumber": "201160100110060",
@@ -13,7 +13,9 @@
             {
                 "id": 7
             },
-        "batch": "2020-21",
+        "role1":{"id":2},
+        "batch":"2020-21",
+        "hasStudentCreditCard":0,
         "dob": "2000-08-11"
     },
     {
@@ -31,7 +33,9 @@
             {
                 "id": 1
             },
-        "batch": "2020-21",
+        "role1":{"id":2},
+        "batch":"2020-21",
+        "hasStudentCreditCard":0,
         "dob": "2000-08-12"
     },
     {
@@ -49,7 +53,9 @@
             {
                 "id": 1
             },
-        "batch": "2020-21",
+            "role1":{"id":2},
+            "batch":"2020-21",
+            "hasStudentCreditCard":0,
         "dob": "2000-08-13"
     },
     {
@@ -1293,4 +1299,4 @@
             },
         "batch": "2020-21",
         "dob": "2000-08-23"
-    }
+    }]

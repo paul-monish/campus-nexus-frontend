@@ -3,7 +3,7 @@ import Header from './Header'
 import SideNav from './SideNav'
 import Footer from './Footer'
 import { useEffect } from 'react'
-
+import { Link } from 'react-router-dom'
 const Student = () => {
     useEffect(() => {
         
@@ -25,8 +25,8 @@ const Student = () => {
                 </div>
                 <div className="col-sm-6">
                 <ol className="breadcrumb float-sm-right">
-                    <li className="breadcrumb-item"><a href="#">Home</a></li>
-                    <li className="breadcrumb-item active">DataTables</li>
+                    <li className="breadcrumb-item"><Link to="admin/admin-dashboard">Dashboard</Link></li>
+                    <li className="breadcrumb-item active">Student List</li>
                 </ol>
                 </div>
             </div>

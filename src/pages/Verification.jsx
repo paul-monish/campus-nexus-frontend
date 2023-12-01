@@ -4,8 +4,9 @@ import LoginOutlinedIcon from '@mui/icons-material/LoginOutlined';
 import DomainVerificationOutlinedIcon from '@mui/icons-material/DomainVerificationOutlined';
 import { useState } from 'react';
 import { decrypt } from '../security/JWTSecurity';
+import Swal from 'sweetalert2';
 const Verification = () => {
-  const paperStyle = { padding: 20, height: '300px', width: "280px", margin: "90px auto", borderRadius: 10 }
+  const paperStyle = { padding: 20, height: '330px', width: "280px", margin: "90px auto", borderRadius: 10 }
   const avatarStyle = { backgroundColor: '#1bbd7e', height: "60px", width: "60px" }
   const btnstyle = { margin: '8px 0' }
 
@@ -19,13 +20,24 @@ const Verification = () => {
 
   const navigate = useNavigate();
   const navigateToReset = () => {
-    
+    if(otp.otp.trim()==='' ){
+      Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text:"OTP is required!",
+        });
+    return;
+  }
     if(decrypt(sessionStorage.getItem('otp'))===otp.otp){
       sessionStorage.removeItem('otp')
       navigate("/Reset");
     }
     else{
-      alert("Enter Correct OTP!!")
+      Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text:"Entered Correct OTP!",
+        });        
       return
     }
     

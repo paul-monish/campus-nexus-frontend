@@ -6,7 +6,7 @@ import {createTheme, ThemeProvider} from '@mui/material/styles';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import Stack from '@mui/joy/Stack';
-
+import Logout from '../components/Logout';
 const appBarTheme = createTheme({
     palette: {
       appbarColor: {
@@ -19,10 +19,11 @@ const appBarTheme = createTheme({
 const appBar = () => {
   return (
     <>
-        <ThemeProvider theme={appBarTheme}>
+      <ThemeProvider theme={appBarTheme}>
         <AppBar position='absolute' color="appbarColor">
           <Toolbar>
             <img src={logo2} alt="logo" className='nav-logo' />
+            <Logout/>
             <Typography varient="h1" component='div' fontWeight={800} sx={{ flexGrow: 2, fontSize: 20, fontFamily: 'Montserrat' }} > </Typography>
             <Stack direction='row' spacing={1}>
             <img src={logo1} alt="mckvlogo2" height={50} width={300}/>
