@@ -9,14 +9,13 @@ import { myAxios, privateAxios } from "./helper"
 export const login=(user)=>{
     // const eU = encryptPayload(JSON.stringify(user.username), secretKey, initVector);
     // const eP = encryptPayload(JSON.stringify(user.password), secretKey, initVector);
-    // console.log(eU+eP)
+   
     // user={
     //     username:eU,
     //     password:eP
     // }
 
     // const encryptedPayload = encryptPayload(JSON.stringify(user), secretKey, initVector);
-    // console.log(encryptedPayload)
     return myAxios
     .post('/auth/authenticate/login',user
     // ,{
@@ -26,6 +25,11 @@ export const login=(user)=>{
     //   }
       )
     .then((response)=>response.data);
+}
+export const adminLogin=(user)=>{
+  return myAxios
+  .post('/auth/authenticate/admin-login',user)
+  .then((response)=>response.data);
 }
 export const setEnroll=(user)=>{
   return myAxios
@@ -60,7 +64,6 @@ export const isRedisCacheActive=(user)=>{
   .then((response)=>response.data);
 }
 export const sendOtpEmail=(user)=>{
-  // console.log(process.env.REACT_APP_BASE_URL+"ss");
     return myAxios
     .post('/user/send-otp',user)
     .then((response)=>response.data);
@@ -79,8 +82,15 @@ export const logout=(user)=>{
 }
 
 export const getStudentPaymentRecord=(userId)=>{
-  console.log(userId)
+
   return myAxios
   .get(`/permanent/student-payment-record/${userId}`)
+  .then((response)=>response.data);
+}
+
+
+export const serveEnrollForm=(uRoll)=>{
+  return myAxios
+  .get(`/permanent/enroll?uRoll=${uRoll}`)
   .then((response)=>response.data);
 }

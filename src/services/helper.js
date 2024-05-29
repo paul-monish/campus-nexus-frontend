@@ -1,6 +1,6 @@
 import axios from "axios";
 import { getToken } from "../auth/authenticate";
-import  API_URL from "../Config";
+import  {API_URL} from "../Config";
 
 //public 
 export const myAxios=axios.create({

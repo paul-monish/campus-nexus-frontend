@@ -18,7 +18,7 @@ export const Login = () => {
  
   const [user,setUser]=useState({
     username:'',
-    password:''
+    password:'',
   });
   // const [error,setError]=useState({
   //   errors:{},
@@ -27,7 +27,7 @@ export const Login = () => {
 
   //handle change 
    const handleChnage=(e)=>{
-    // console.log(e.target.name);
+    // (e.target.name);
     setUser({...user,[e.target.name]:e.target.value})
    }
 
@@ -64,8 +64,6 @@ export const Login = () => {
         navigate("/user/dashboard")
       })
     }).catch((error)=>{
-      // console.log(error)
-      console.log(error);
       if(error.response.status === 400 || error.response.status === 404 || error.response.data.status === "false" || error.response.status === 401)
         Swal.fire({
           icon: "error",

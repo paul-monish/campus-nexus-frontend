@@ -73,7 +73,9 @@
             {
                 "id": 1
             },
-        "batch": "2020-21",
+            "role1":{"id":2},
+            "batch":"2020-21",
+            "hasStudentCreditCard":0,
         "dob": "2000-08-14"
     },
     {
@@ -89,9 +91,11 @@
             },
         "semester": 
             {
-                "id": 1
+                "id": 7
             },
-        "batch": "2020-21",
+            "role1":{"id":2},
+            "batch":"2020-21",
+            "hasStudentCreditCard":0,
         "dob": "2000-08-15"
     },
     {
@@ -107,10 +111,12 @@
             },
         "semester": 
             {
-                "id": 1
+                "id": 7
             },
-        "batch": "2020-21",
-        "dob": "2000-08-16"
+            "role1":{"id":2},
+            "batch":"2020-21",
+            "hasStudentCreditCard":0,
+            "dob": "2000-08-11"
     },
     {
         "name": "ARCHISMAN DAS",
@@ -125,14 +131,16 @@
             },
         "semester": 
             {
-                "id": 1
+                "id": 7
             },
-        "batch": "2020-21",
-        "dob": "2000-08-17"
+            "role1":{"id":2},
+            "batch":"2020-21",
+            "hasStudentCreditCard":0,
+            "dob": "2000-08-11"
     },
     {
         "name": "ARINDAM SAL",
-        "email": "monish.paul2000@gmail.com",
+        "email": "saikatchatterjee2000@gmail.com",
         "universityRollNumber": "201160100110011",
         "contactNumber": "6290442416",
         "collageRollNumber": "CSE/2020/011",
@@ -143,10 +151,12 @@
             },
         "semester": 
             {
-                "id": 1
+                "id": 7
             },
-        "batch": "2020-21",
-        "dob": "2000-08-18"
+            "role1":{"id":2},
+            "batch":"2020-21",
+            "hasStudentCreditCard":0,
+            "dob": "2000-08-11"
     },
     {
         "name": "ARPANDEV BHATTACHARYA",
@@ -161,10 +171,12 @@
             },
         "semester": 
             {
-                "id": 1
+                "id": 7
             },
-        "batch": "2020-21",
-        "dob": "2000-08-19"
+            "role1":{"id":2},
+            "batch":"2020-21",
+            "hasStudentCreditCard":0,
+            "dob": "2000-08-11"
     },
     {
         "name": "ATANU PANJA",
@@ -179,10 +191,12 @@
             },
         "semester": 
             {
-                "id": 1
+                "id": 7
             },
-        "batch": "2020-21",
-        "dob": "2000-08-20"
+            "role1":{"id":2},
+            "batch":"2020-21",
+            "hasStudentCreditCard":0,
+            "dob": "2000-08-11"
     },
     {
         "name": "ATREYEE KAR",
@@ -197,10 +211,12 @@
             },
         "semester": 
             {
-                "id": 1
+                "id": 7
             },
-        "batch": "2020-21",
-        "dob": "2000-08-21"
+            "role1":{"id":2},
+            "batch":"2020-21",
+            "hasStudentCreditCard":0,
+            "dob": "2000-08-11"
     },
     {
         "name": "AVIJEET SHARMA",
@@ -215,10 +231,12 @@
             },
         "semester": 
             {
-                "id": 1
+                "id": 7
             },
-        "batch": "2020-21",
-        "dob": "2000-08-22"
+            "role1":{"id":2},
+            "batch":"2020-21",
+            "hasStudentCreditCard":0,
+            "dob": "2000-08-11"
     },
     {
         "name": "AVIRUP MAZUMDER",
@@ -233,10 +251,12 @@
             },
         "semester": 
             {
-                "id": 1
+                "id": 7
             },
-        "batch": "2020-21",
-        "dob": "2000-08-23"
+            "role1":{"id":2},
+            "batch":"2020-21",
+            "hasStudentCreditCard":0,
+            "dob": "2000-08-11"
     },
     {
         "name": "AYUSH KUMAR JHA",
@@ -251,10 +271,12 @@
             },
         "semester": 
             {
-                "id": 1
+                "id": 7
             },
-        "batch": "2020-21",
-        "dob": "2000-08-23"
+            "role1":{"id":2},
+            "batch":"2020-21",
+            "hasStudentCreditCard":0,
+            "dob": "2000-08-11"
     },
     {
         "name": "BADAL KUMAR",
@@ -269,10 +291,12 @@
             },
         "semester": 
             {
-                "id": 1
+                "id": 7
             },
-        "batch": "2020-21",
-        "dob": "2000-08-23"
+            "role1":{"id":2},
+            "batch":"2020-21",
+            "hasStudentCreditCard":0,
+            "dob": "2000-08-11"
     },
     {
         "name": "BIDISHA CHATTERJEE",
@@ -287,14 +311,16 @@
             },
         "semester": 
             {
-                "id": 1
+                "id": 7
             },
-        "batch": "2020-21",
-        "dob": "2000-08-23"
+            "role1":{"id":2},
+            "batch":"2020-21",
+            "hasStudentCreditCard":0,
+            "dob": "2000-08-11"
     },
     {
         "name": "BIPASHNA SADHUKHAN",
-        "email": "monish.paul2000@gmail.com",
+        "email": "monish.paul2007@gmail.com",
         "universityRollNumber": "201160100110054",
         "contactNumber": "6290442416",
         "collageRollNumber": "CSE/2020/035",
@@ -305,14 +331,16 @@
             },
         "semester": 
             {
-                "id": 1
+                "id": 7
             },
-        "batch": "2020-21",
-        "dob": "2000-08-23"
+            "role1":{"id":2},
+            "batch":"2020-21",
+            "hasStudentCreditCard":0,
+            "dob": "2000-08-11"
     },
     {
         "name": "DEBRUP PRAMANIK",
-        "email": "monish.paul2000@gmail.com",
+        "email": "monish.paul2008@gmail.com",
         "universityRollNumber": "201160100110038",
         "contactNumber": "6290442416",
         "collageRollNumber": "CSE/2020/030",
@@ -323,10 +351,12 @@
             },
         "semester": 
             {
-                "id": 1
+                "id": 7
             },
-        "batch": "2020-21",
-        "dob": "2000-08-23"
+            "role1":{"id":2},
+            "batch":"2020-21",
+            "hasStudentCreditCard":0,
+            "dob": "2000-08-11"
     },
     {
         "name": "DIPAK MOURYA",
@@ -343,12 +373,14 @@
             {
                 "id": 1
             },
-        "batch": "2020-21",
-        "dob": "2000-08-23"
+            "role1":{"id":2},
+            "batch":"2020-21",
+            "hasStudentCreditCard":0,
+            "dob": "2000-08-11"
     },
     {
         "name": "DIPANJAN NATH",
-        "email": "monish.paul2000@gmail.com",
+        "email": "monish.paul2011@gmail.com",
         "universityRollNumber": "201160100110025",
         "contactNumber": "6290442416",
         "collageRollNumber": "CSE/2020/002",
@@ -359,14 +391,16 @@
             },
         "semester": 
             {
-                "id": 1
+                "id": 7
             },
-        "batch": "2020-21",
-        "dob": "2000-08-23"
+            "role1":{"id":2},
+            "batch":"2020-21",
+            "hasStudentCreditCard":0,
+            "dob": "2000-08-11"
     },
     {
         "name": "DIVYANSHU SHEKHAR",
-        "email": "monish.paul2000@gmail.com",
+        "email": "monish.paul2012@gmail.com",
         "universityRollNumber": "201160100110055",
         "contactNumber": "6290442416",
         "collageRollNumber": "CSE/2020/059",
@@ -377,14 +411,16 @@
             },
         "semester": 
             {
-                "id": 1
+                "id": 7
             },
-        "batch": "2020-21",
-        "dob": "2000-08-23"
+            "role1":{"id":2},
+            "batch":"2020-21",
+            "hasStudentCreditCard":0,
+            "dob": "2000-08-11"
     },
     {
         "name": "DWIJENDRA PATI TRIPATHI",
-        "email": "monish.paul2000@gmail.com",
+        "email": "monish.paul2012@gmail.com",
         "universityRollNumber": "201160100110056",
         "contactNumber": "6290442416",
         "collageRollNumber": "CSE/2020/063",
@@ -395,10 +431,12 @@
             },
         "semester": 
             {
-                "id": 1
+                "id": 7
             },
-        "batch": "2020-21",
-        "dob": "2000-08-23"
+            "role1":{"id":2},
+            "batch":"2020-21",
+            "hasStudentCreditCard":0,
+            "dob": "2000-08-11"
     },
     {
         "name": "ERA VERMA",

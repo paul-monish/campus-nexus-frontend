@@ -14,7 +14,7 @@ const Verification = () => {
     otp:''
   })
   const handleChnage=(e)=>{
-    // console.log(e.target.name);
+ 
     setOtp({...otp,[e.target.name]:e.target.value})
    }
 

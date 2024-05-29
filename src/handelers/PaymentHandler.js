@@ -1,5 +1,7 @@
 import {createOrder, updateOrder} from "../services/payment-service";
 import Swal from 'sweetalert2'
+import  {RAZORPAY_KEY} from "../Config";
+// import logo from "";
 function loadScript(src){
   return new Promise((resolve) => {
       const script = document.createElement("script");
@@ -13,26 +15,41 @@ function loadScript(src){
       document.body.appendChild(script);
   });
 }
+
 export default async function displayRazorpay(data){
   const res = await loadScript(
       "https://checkout.razorpay.com/v1/checkout.js"
   );
   if (!res) {
-      alert("Razorpay SDK failed to load. Are you online?");
-      return;
+    Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Razorpay SDK failed to load. You Are Not online",
+        // footer: '<a href="#">Why do I have this issue?</a>'
+      });
+     return;
   }
  
   // const result = await privateAxios.post(`/payment/create-order`,data);
   let result="";
    try{
-    result= await createOrder(data);
-    console.log(result);
-    if (!result) {
-        alert("Server error. Are you online?");
-        return;
-    }
+      result= await createOrder(data);
+      if (!result) {
+          Swal.fire({
+              icon: "error",
+              title: "Oops...",
+              text: "Server error. You Are Not Online!",
+              // footer: '<a href="#">Why do I have this issue?</a>'
+            });
+          return;
+      }
     }catch(error){ 
-        alert(error.response.data.message);
+        Swal.fire({
+            icon: "error",
+            title: "Oops...",
+            text: error.response.data.message??"Something Went Wrong!",
+            // footer: '<a href="#">Why do I have this issue?</a>'
+          });
         return;
       
     }
@@ -59,20 +76,10 @@ export default async function displayRazorpay(data){
               universityRollNumber:universityRollNumber,
               status: "paid"
           };
-          console.log(data);
-          //update payment on server
-          // let update_data=JSON.stringify({
-          //     payment_id:data.razorpayPaymentId,
-          //     order_id:data.razorpayOrderId,
-          //     status:data.status
-          // })
-          //console.log(update_data);
-          // const result = await privateAxios.put(`/payment/update-order`,data);
           try{
             const result = await updateOrder(data);
             if(result){
                 Swal.fire({
-                    // position: "top-end",
                     icon: "success",
                     title: "Your Payment Is Successfull!",
                     showConfirmButton: false,
@@ -103,7 +110,7 @@ export default async function displayRazorpay(data){
           address: "MCKV Institute Of Engineering",
       },
       theme: {
-          color: "#61dafb",
+          color: "#0a1945",
       },
   };
 

@@ -1,42 +1,53 @@
-import React, { useEffect,useState } from 'react'
-import { doLogout, getCurrentUserDetails } from '../auth/authenticate';
-import { logout } from '../services/user-service';
-import { useNavigate } from 'react-router-dom';
-import { Button } from '@mui/material';
-import Swal from 'sweetalert2'
+import React, { useEffect, useState } from "react";
+import { doLogout, getCurrentUserDetails } from "../auth/authenticate";
+import { logout } from "../services/user-service";
+import { useNavigate } from "react-router-dom";
+import { Button } from "@mui/material";
+import Swal from "sweetalert2";
 const Logout = () => {
-    const navigate =useNavigate();
-const[user,setUser]=useState(undefined);
-useEffect(()=>{
+  const navigate = useNavigate();
+  const [user, setUser] = useState(undefined);
+  useEffect(() => {
     setUser(getCurrentUserDetails());
-  },[]);
+  }, []);
 
-  const exitFromSession=()=>{
+  const exitFromSession = () => {
     //call api
-    logout(user).then((data)=>{
-        if(data.success===true){
-            doLogout(()=>{
-                Swal.fire({
-                  // position: "top-end",
-                  icon: "success",
-                  title: data.message??"Logout Successfully!",
-                  showConfirmButton: false,
-                  timer: 1500
-                });
-                navigate("/login")
-            })
+    logout(user)
+      .then((data) => {
+        if (data.success === true) {
+          doLogout(() => {
+            Swal.fire({
+              // position: "top-end",
+              icon: "success",
+              title: data.message ?? "Logout Successfully!",
+              showConfirmButton: false,
+              timer: 1500,
+            });
+            navigate("/login");
+          });
         }
-        
-      }).catch((error)=>{
-        console.log(error)
       })
-  }
-  const btnstyle = { margin: '8px 0', backgroundColor: "#ffa500" }
+      .catch((error) => {
+        alert(error);
+      });
+  };
+  const btnstyle = { margin: "8px 0", backgroundColor: "#656899" };
   return (
-   
     <div>
-       <Button type='submit' color='primary' variant="contained" style={btnstyle} sx={{fontWeight: 'bold', display: 'flex', justifyContent: 'center' }} fullWidth fontWeight="bold"  onClick={exitFromSession}>Logout</Button> 
+      <Button
+        type="submit"
+        color="primary"
+        variant="contained"
+        style={btnstyle}
+        sx={{ fontWeight: "bold", display: "flex", justifyContent: "center" }}
+        fullWidth
+        fontWeight="bold"
+        onClick={exitFromSession}
+      >
+        Logout
+      </Button>
     </div>
-  )
-}
-export default Logout
+  );
+};
+export default Logout;

@@ -32,10 +32,8 @@ function Payment() {
   //call semeter api
   const getSemester=()=>{
     getSemesters().then((data)=>{
-        console.log(data);
         setSemList(data)
     }).catch((error)=>{
-      console.log(error)
       if(error.response.status === 400 || error.response.status === 404)
         alert(error.response.data.message)
     })
@@ -49,9 +47,6 @@ function Payment() {
   }
   
   const chnageAmount=(id)=>{
-    // return  semList.filter((s) => s.id===id).map((s)=>{return s})
-    // console.log(typeof(id))
-    // console.log(typeof(semList[0].id))
     semList.filter((s)=>s.id===id).map((s)=>{ 
       return setData({...data,'amount':s.fees.fees})
     })

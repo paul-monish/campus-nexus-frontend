@@ -23,7 +23,6 @@ const Reset = () => {
         document.title="mckvie payment";
       },[]);
        const handleChnage=(e)=>{
-         // console.log(e.target.name);
          setUser({...user,[e.target.name]:e.target.value})
         }
         const submitForm=(e)=>{
@@ -59,7 +58,6 @@ const Reset = () => {
              navigate("/login")
           
          }).catch((error)=>{
-           console.log(error)
            if(error.response.status === 400 || error.response.status === 404){
             Swal.fire({
               icon: "error",

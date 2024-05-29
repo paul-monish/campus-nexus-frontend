@@ -6,7 +6,7 @@ import {createTheme, ThemeProvider} from '@mui/material/styles';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import Stack from '@mui/joy/Stack';
-import Logout from '../components/Logout';
+import Logout from './Logout';
 const appBarTheme = createTheme({
     palette: {
       appbarColor: {

@@ -3,6 +3,7 @@ import { doLogout, getCurrentUserDetails } from '../auth/authenticate';
 import { logout } from '../services/user-service';
 import { useNavigate } from 'react-router-dom';
 import { Button } from '@mui/material';
+import Swal from 'sweetalert2'
 const AdminLogout = () => {
     const navigate =useNavigate();
 const[user,setUser]=useState(undefined);
@@ -15,13 +16,18 @@ useEffect(()=>{
     logout(user).then((data)=>{
         if(data.success===true){
             doLogout(()=>{
-                alert(data.message)
+                Swal.fire({
+                  icon: "success",
+                  title: data.message??"Logout Successfully!",
+                  showConfirmButton: false,
+                  timer: 1500
+                });
                 navigate("/admin-login")
             })
         }
         
       }).catch((error)=>{
-        console.log(error)
+        alert(error)
       })
   }
   const btnstyle = { margin: '8px 0', backgroundColor: "#ffa500" }
